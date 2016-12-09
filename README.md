@@ -1,4 +1,14 @@
-# react-button [![build status](https://travis-ci.org/trendmicro-frontend/react-button.svg?branch=master)](https://travis-ci.org/trendmicro-frontend/react-button) [![Coverage Status](https://coveralls.io/repos/github/trendmicro-frontend/react-button/badge.svg?branch=master)](https://coveralls.io/github/trendmicro-frontend/react-button?branch=master)
+# react-buttons [![build status](https://travis-ci.org/trendmicro-frontend/react-buttons.svg?branch=master)](https://travis-ci.org/trendmicro-frontend/react-buttons) [![Coverage Status](https://coveralls.io/repos/github/trendmicro-frontend/react-buttons/badge.svg?branch=master)](https://coveralls.io/github/trendmicro-frontend/react-buttons?branch=master)
+
+[![NPM](https://nodei.co/npm/@trendmicro/react-buttons.png?downloads=true&stars=true)](https://nodei.co/npm/@trendmicro/react-buttons/)
+
+Demo: https://trendmicro-frontend.github.io/react-buttons
+
+## Installation
+
+```
+npm install --save @trendmicro/react-buttons
+```
 
 ## Usage
 

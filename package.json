@@ -1,7 +1,7 @@
 {
   "name": "@trendmicro/react-buttons",
   "version": "0.3.0",
-  "description": "Trend Micro React Buttons Component",
+  "description": "Trend Micro Components: React Buttons",
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -21,7 +21,19 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-buttons.git"
   },
-  "author": "https://github.com/orgs/trendmicro-frontend/people",
+  "author": "https://github.com/orgs/trendmicro-frontend/",
+  "contributors": [
+    {
+      "name": "Tina C Lin",
+      "email": "tina_c_lin@trend.com.tw",
+      "url": "https://github.com/tinaclin"
+    },
+    {
+      "name": "Cheton Wu",
+      "email": "cheton@gmail.com",
+      "url": "https://github.com/cheton"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trendmicro-frontend/react-buttons/issues"
@@ -31,6 +43,7 @@
     "react",
     "react-component",
     "button",
+    "buttons",
     "dropdown"
   ],
   "peerDependencies": {
@@ -56,7 +69,7 @@
     "eslint-plugin-import": "~2.2.0",
     "eslint-plugin-jsx-a11y": "~2.2.3",
     "eslint-plugin-react": "~6.8.0",
-    "http-server": "^0.9.0",
+    "http-server": "~0.9.0",
     "imports-loader": "~0.7.0",
     "json-loader": "~0.5.4",
     "nib": "~1.1.2",

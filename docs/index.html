@@ -12,18 +12,32 @@ html, body {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
 }
+body {
+    background-color: #eee;
+}
 .page-title {
     font-weight: bold;
     font-size: 64px;
     text-align: center;
 }
 #container {
-    text-align: center;
+    text-align: left;
+    margin: 10px;
+}
+#container > div > div {
+    border: 1px solid #d8d8d8;
+    padding: 0 16px 16px 16px;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#container h4 {
+    line-height: 52px;
 }
 </style>
 </head>
 <body>
-    <div class="row">
+    <div>
         <div class="col-sm-12" style="margin-bottom: 1em;">
             <h1 class="page-title">
                 <a href="https://github.com/trendmicro-frontend/react-buttons">React Buttons</a>
