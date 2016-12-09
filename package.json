@@ -1,0 +1,73 @@
+{
+  "name": "@trendmicro/react-buttons",
+  "version": "0.3.0",
+  "description": "Trend Micro React Buttons Component",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "npm run lint && npm test && npm run build && npm run build-examples",
+    "build": "rm -f lib/*; babel --out-dir ./lib ./src",
+    "build-examples": "cd examples; webpack; cp -af index.html ../docs/index.html",
+    "demo": "http-server -p 8000 docs/",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
+    "test": "./babel-tap --coverage test/*.js",
+    "coveralls": "./babel-tap --coverage --coverage-report=text-lcov test/*.js | node_modules/.bin/coveralls",
+    "webpack-dev-server": "cd examples; webpack-dev-server --hot --inline --host 0.0.0.0 --port 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendmicro-frontend/react-buttons.git"
+  },
+  "author": "https://github.com/orgs/trendmicro-frontend/people",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trendmicro-frontend/react-buttons/issues"
+  },
+  "homepage": "https://github.com/trendmicro-frontend/react-buttons",
+  "keywords": [
+    "react",
+    "react-component",
+    "button",
+    "dropdown"
+  ],
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "~6.18.0",
+    "babel-core": "~6.18.2",
+    "babel-eslint": "~7.1.1",
+    "babel-loader": "~6.2.9",
+    "babel-plugin-transform-decorators-legacy": "~1.3.4",
+    "babel-preset-es2015": "~6.18.0",
+    "babel-preset-react": "~6.16.0",
+    "babel-preset-stage-0": "~6.16.0",
+    "classnames": "~2.2.5",
+    "coveralls": "~2.11.15",
+    "css-loader": "~0.26.1",
+    "eslint": "~3.11.1",
+    "eslint-config-trendmicro": "~0.5.0",
+    "eslint-loader": "~1.6.1",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-jsx-a11y": "~2.2.3",
+    "eslint-plugin-react": "~6.8.0",
+    "http-server": "^0.9.0",
+    "imports-loader": "~0.7.0",
+    "json-loader": "~0.5.4",
+    "nib": "~1.1.2",
+    "react": "~0.14.0 || ~15.0.0",
+    "react-dom": "~0.14.0 || ~15.0.0",
+    "style-loader": "~0.13.1",
+    "stylint": "~1.5.7",
+    "stylint-loader": "~1.0.0",
+    "stylus-loader": "~2.4.0",
+    "tap": "~8.0.1",
+    "webpack": "~1.14.0",
+    "webpack-dev-server": "~1.16.2"
+  }
+}
