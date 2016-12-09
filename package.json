@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-buttons.git"
   },
-  "author": "Tina C Lin (https://github.com/tinaclin)",
+  "author": "Tina C Lin <tina_c_lin@trend.com.tw>",
   "contributors": [
     {
       "name": "Tina C Lin",
@@ -30,7 +30,7 @@
     },
     {
       "name": "Cheton Wu",
-      "email": "cheton@gmail.com",
+      "email": "cheton_wu@trend.com.tw",
       "url": "https://github.com/cheton"
     }
   ],
