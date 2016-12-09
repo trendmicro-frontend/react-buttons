@@ -1,0 +1,21 @@
+{
+  "name": "react-buttons",
+  "version": "0.3.0",
+  "description": "Trend Micro Components: React Buttons",
+  "authors": [
+    "Tina C Lin <tina_c_lin@trend.com.tw>",
+    "Cheton Wu <cheton_wu@trend.com.tw>"
+  ],
+  "homepage": "https://github.com/trendmicro-frontend/react-buttons",
+  "snapshots": [],
+  "keywords": [
+    "react",
+    "react-component",
+    "button",
+    "buttons",
+    "dropdown"
+  ],
+  "dependencies": {
+  },
+  "license": "MIT"
+}
