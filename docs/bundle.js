@@ -68,6 +68,22 @@
 	
 	var _FullWidthButtons2 = _interopRequireDefault(_FullWidthButtons);
 	
+	var _ButtonStates = __webpack_require__(183);
+	
+	var _ButtonStates2 = _interopRequireDefault(_ButtonStates);
+	
+	var _ButtonGroups = __webpack_require__(184);
+	
+	var _ButtonGroups2 = _interopRequireDefault(_ButtonGroups);
+	
+	var _IconButtons = __webpack_require__(185);
+	
+	var _IconButtons2 = _interopRequireDefault(_IconButtons);
+	
+	var _DropdownButtons = __webpack_require__(186);
+	
+	var _DropdownButtons2 = _interopRequireDefault(_DropdownButtons);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -75,8 +91,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	// import ButtonStates from './ButtonStates';
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -89,10 +103,6 @@
 	
 	    _createClass(App, [{
 	        key: 'render',
-	
-	        // <div className="col-sm-4">
-	        //     <ButtonStates />
-	        // </div>
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
@@ -104,13 +114,33 @@
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-sm-12 col-md-6' },
+	                    { className: 'col-sm-12 col-md-6 col-lg-4' },
 	                    _react2.default.createElement(_ButtonSizes2.default, null)
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-sm-12 col-md-6' },
+	                    { className: 'col-sm-12 col-md-6 col-lg-4' },
 	                    _react2.default.createElement(_FullWidthButtons2.default, null)
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-12 col-md-6 col-lg-4' },
+	                    _react2.default.createElement(_ButtonStates2.default, null)
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-12 col-md-6 col-lg-4' },
+	                    _react2.default.createElement(_ButtonGroups2.default, null)
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-12 col-md-6 col-lg-4' },
+	                    _react2.default.createElement(_IconButtons2.default, null)
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-12 col-md-6 col-lg-4' },
+	                    _react2.default.createElement(_DropdownButtons2.default, null)
 	                )
 	            );
 	        }
@@ -20436,7 +20466,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.ButtonToolbar = exports.ButtonGroup = exports.Button = undefined;
+	exports.ButtonDropdown = exports.ButtonToolbar = exports.ButtonGroup = exports.Button = undefined;
 	
 	var _Button2 = __webpack_require__(170);
 	
@@ -20450,11 +20480,16 @@
 	
 	var _ButtonToolbar3 = _interopRequireDefault(_ButtonToolbar2);
 	
+	var _ButtonDropdown2 = __webpack_require__(176);
+	
+	var _ButtonDropdown3 = _interopRequireDefault(_ButtonDropdown2);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.Button = _Button3.default;
 	exports.ButtonGroup = _ButtonGroup3.default;
 	exports.ButtonToolbar = _ButtonToolbar3.default;
+	exports.ButtonDropdown = _ButtonDropdown3.default;
 
 /***/ },
 /* 170 */
@@ -38749,17 +38784,7 @@
 	            null,
 	            _react2.default.createElement(
 	                _src.Button,
-	                { btnSize: 'lg' },
-	                'Large'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
 	                { btnSize: 'large' },
-	                'Large'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
-	                { btnSize: 'lg', btnStyle: 'default' },
 	                'Large'
 	            ),
 	            _react2.default.createElement(
@@ -38781,17 +38806,7 @@
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	                _src.Button,
-	                { btnSize: 'md' },
-	                'Medium'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
 	                { btnSize: 'medium' },
-	                'Medium'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
-	                { btnSize: 'md', btnStyle: 'default' },
 	                'Medium'
 	            ),
 	            _react2.default.createElement(
@@ -38813,17 +38828,7 @@
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	                _src.Button,
-	                { btnSize: 'sm' },
-	                'Small'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
 	                { btnSize: 'small' },
-	                'Small'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
-	                { btnSize: 'sm', btnStyle: 'default' },
 	                'Small'
 	            ),
 	            _react2.default.createElement(
@@ -38845,17 +38850,7 @@
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	                _src.Button,
-	                { btnSize: 'xs' },
-	                'Extra Small'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
 	                { btnSize: 'extra-small' },
-	                'Extra Small'
-	            ),
-	            _react2.default.createElement(
-	                _src.Button,
-	                { btnSize: 'xs', btnStyle: 'default' },
 	                'Extra Small'
 	            ),
 	            _react2.default.createElement(
@@ -38918,6 +38913,574 @@
 	            _src.Button,
 	            { btnSize: 'lg', btnStyle: 'emphasis', block: true },
 	            'Full-width Button'
+	        )
+	    );
+	};
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _src = __webpack_require__(169);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h4',
+	            null,
+	            'Button Sizes'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                _src.Button,
+	                null,
+	                'Normal'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'primary' },
+	                'Normal'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'emphasis' },
+	                'Normal'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'flat' },
+	                'Normal'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { hover: true },
+	                'Hover'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { hover: true, btnStyle: 'primary' },
+	                'Hover'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { hover: true, btnStyle: 'emphasis' },
+	                'Hover'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { hover: true, btnStyle: 'flat' },
+	                'Hover'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { active: true },
+	                'Active'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { active: true, btnStyle: 'primary' },
+	                'Active'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { active: true, btnStyle: 'emphasis' },
+	                'Active'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { active: true, btnStyle: 'flat' },
+	                'Active'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { focus: true },
+	                'Focus'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { focus: true, btnStyle: 'primary' },
+	                'Focus'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { focus: true, btnStyle: 'emphasis' },
+	                'Focus'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { focus: true, btnStyle: 'flat' },
+	                'Focus'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { disabled: true },
+	                'Disabled'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { disabled: true, btnStyle: 'primary' },
+	                'Disabled'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { disabled: true, btnStyle: 'emphasis' },
+	                'Disabled'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { disabled: true, btnStyle: 'flat' },
+	                'Disabled'
+	            )
+	        )
+	    );
+	};
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _src = __webpack_require__(169);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h4',
+	            null,
+	            'Button Groups'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Group related buttons to improve clarity and imply relavance.'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Default button group'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.ButtonGroup,
+	                null,
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { active: true },
+	                    'Left'
+	                ),
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    null,
+	                    'Middle'
+	                ),
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    null,
+	                    'Right'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.ButtonGroup,
+	                null,
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { iconOnly: true },
+	                    _react2.default.createElement('i', { className: 'fa fa-pencil' })
+	                ),
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { iconOnly: true },
+	                    _react2.default.createElement('i', { className: 'fa fa-mail-reply' })
+	                )
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Flat button group'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.ButtonGroup,
+	                null,
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { btnStyle: 'flat', active: true },
+	                    'Left'
+	                ),
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { btnStyle: 'flat' },
+	                    'Middle'
+	                ),
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { btnStyle: 'flat' },
+	                    'Right'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.ButtonGroup,
+	                null,
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { btnStyle: 'flat', iconOnly: true },
+	                    _react2.default.createElement('i', { className: 'fa fa-pie-chart' })
+	                ),
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { btnStyle: 'flat', iconOnly: true },
+	                    _react2.default.createElement('i', { className: 'fa fa-line-chart' })
+	                ),
+	                _react2.default.createElement(
+	                    _src.Button,
+	                    { btnStyle: 'flat', iconOnly: true },
+	                    _react2.default.createElement('i', { className: 'fa fa-table' })
+	                )
+	            )
+	        )
+	    );
+	};
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _src = __webpack_require__(169);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h4',
+	            null,
+	            'Buttons with an Icon'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Static (default)'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                null,
+	                _react2.default.createElement('i', { className: 'fa fa-download' }),
+	                'Download'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'primary' },
+	                _react2.default.createElement('i', { className: 'fa fa-plus' }),
+	                'Add Account'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Progressing'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { disabled: true },
+	                _react2.default.createElement('i', { className: 'fa fa-circle-o-notch fa-spin' }),
+	                'Uploading'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'primary', disabled: true },
+	                _react2.default.createElement('i', { className: 'fa fa-circle-o-notch fa-spin' }),
+	                'Uploading'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Static (flat)'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'flat' },
+	                _react2.default.createElement('i', { className: 'fa fa-pencil fa-fw' }),
+	                'Edit'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'flat' },
+	                _react2.default.createElement('i', { className: 'fa fa-trash-o fa-fw' }),
+	                'Delete'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'flat' },
+	                _react2.default.createElement('i', { className: 'fa fa-book fa-fw' }),
+	                'Library'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Icon only'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { iconOnly: true },
+	                _react2.default.createElement('i', { className: 'fa fa-comment' })
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'primary', iconOnly: true },
+	                _react2.default.createElement('i', { className: 'fa fa-plus' })
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'emphasis', iconOnly: true },
+	                _react2.default.createElement('i', { className: 'fa fa-search' })
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnStyle: 'flat', iconOnly: true },
+	                _react2.default.createElement('i', { className: 'fa fa-cog' })
+	            )
+	        )
+	    );
+	};
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _src = __webpack_require__(169);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+	    var options = [{ label: 'Action', value: 'v1' }, { label: 'Another action', value: 'v2' }, { label: 'Something else here', value: 'v3' }];
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h4',
+	            null,
+	            'Drop-down Buttons'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Use a drop-down menu to provide a list of options for the user.'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Single'
+	                )
+	            ),
+	            _react2.default.createElement(_src.Button, {
+	                dropdown: true,
+	                placeholder: 'Select...',
+	                options: options,
+	                onChange: function onChange(selectedOption) {
+	                    if (selectedOption) {
+	                        console.log('label =' + selectedOption.label + ', value = ' + selectedOption.value);
+	                    }
+	                }
+	            }),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Split'
+	                )
+	            ),
+	            _react2.default.createElement(_src.Button, {
+	                dropdown: true,
+	                dropdownStyle: 'split',
+	                placeholder: 'Select...',
+	                options: options,
+	                value: 'v1'
+	            }),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Text'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                {
+	                    dropdown: true,
+	                    dropdownStyle: 'text',
+	                    options: options
+	                },
+	                'All Devices'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Icon'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                {
+	                    dropdown: true,
+	                    dropdownStyle: 'text',
+	                    options: options,
+	                    customedValueRenderer: function customedValueRenderer(option) {
+	                        return _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            _react2.default.createElement('i', { className: 'fa fa-database' }),
+	                            _react2.default.createElement(
+	                                'span',
+	                                null,
+	                                option.label
+	                            )
+	                        );
+	                    }
+	                },
+	                'All Devices'
+	            ),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                    'strong',
+	                    null,
+	                    'Sizes'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnSize: 'large', dropdown: true },
+	                'Large'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnSize: 'medium', dropdown: true },
+	                'Default'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnSize: 'small', dropdown: true },
+	                'Small'
+	            ),
+	            _react2.default.createElement(
+	                _src.Button,
+	                { btnSize: 'extra-small', dropdown: true },
+	                'Extra Small'
+	            )
 	        )
 	    );
 	};
