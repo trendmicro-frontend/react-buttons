@@ -6,30 +6,22 @@ export default () => {
         <div>
             <h4>Button Sizes</h4>
             <div>
-                <Button btnSize="lg">Large</Button>
                 <Button btnSize="large">Large</Button>
-                <Button btnSize="lg" btnStyle="default">Large</Button>
                 <Button btnSize="lg" btnStyle="primary">Large</Button>
                 <Button btnSize="lg" btnStyle="emphasis">Large</Button>
                 <Button btnSize="lg" btnStyle="flat">Large</Button>
                 <br /><br />
-                <Button btnSize="md">Medium</Button>
                 <Button btnSize="medium">Medium</Button>
-                <Button btnSize="md" btnStyle="default">Medium</Button>
                 <Button btnSize="md" btnStyle="primary">Medium</Button>
                 <Button btnSize="md" btnStyle="emphasis">Medium</Button>
                 <Button btnSize="md" btnStyle="flat">Medium</Button>
                 <br /><br />
-                <Button btnSize="sm">Small</Button>
                 <Button btnSize="small">Small</Button>
-                <Button btnSize="sm" btnStyle="default">Small</Button>
                 <Button btnSize="sm" btnStyle="primary">Small</Button>
                 <Button btnSize="sm" btnStyle="emphasis">Small</Button>
                 <Button btnSize="sm" btnStyle="flat">Small</Button>
                 <br /><br />
-                <Button btnSize="xs">Extra Small</Button>
                 <Button btnSize="extra-small">Extra Small</Button>
-                <Button btnSize="xs" btnStyle="default">Extra Small</Button>
                 <Button btnSize="xs" btnStyle="primary">Extra Small</Button>
                 <Button btnSize="xs" btnStyle="emphasis">Extra Small</Button>
                 <Button btnSize="xs" btnStyle="flat">Extra Small</Button>

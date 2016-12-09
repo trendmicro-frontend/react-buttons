@@ -118,11 +118,11 @@
 
 ```js
 <Button disabled>
-    <i className="fa fa-circle-o-notch rotate" />
+    <i className="fa fa-circle-o-notch fa-spin" />
     Uploading
 </Button>
 <Button btnStyle="primary" disabled>
-    <i className="fa fa-circle-o-notch rotate" />
+    <i className="fa fa-circle-o-notch fa-spin" />
     Uploading
 </Button>
 ```
@@ -130,13 +130,17 @@
 #### Static (flat)
 
 ```js
-<Button disabled>
-    <i className="fa fa-circle-o-notch rotate" />
-    Uploading
+<Button btnStyle="flat">
+    <i className="fa fa-pencil fa-fw" />
+    Edit
 </Button>
-<Button btnStyle="primary" disabled>
-    <i className="fa fa-circle-o-notch rotate" />
-    Uploading
+<Button btnStyle="flat">
+    <i className="fa fa-trash-o fa-fw" />
+    Delete
+</Button btnStyle="flat">
+<Button>
+    <i className="fa fa-book fa-fw" />
+    Library
 </Button>
 ```
 
@@ -159,23 +163,25 @@
 
 ### Dropdown Buttons
 
+const options = [
+    { label: 'Action', value: 'v1' },
+    { label: 'Another action', value: 'v2' },
+    { label: 'Something else here', value: 'v3' }
+];
+
 #### Single
 
 ```js
 <Button
     dropdown
-    options={options}
-    value={defaultValue}
     placeholder="Select..."
+    options={options}
     onChange={(selectedOption) => {
         if (selectedOption) {
-            console.log('label =' + selectedOption.label + ', value = ' + selectedOption.value};
+            console.log('label =' + selectedOption.label + ', value = ' + selectedOption.value);
         }
-        ...
     }}
->
-    Dropdown
-</Button>
+/>
 ```
 
 #### Split
@@ -184,8 +190,9 @@
 <Button
     dropdown
     dropdownStyle="split"
->
-</Button>
+    placeholder="Select..."
+    options={options}
+/>
 ```
 
 #### Text
@@ -194,7 +201,9 @@
 <Button
     dropdown
     dropdownStyle="text"
+    options={options}
 >
+    All Devices
 </Button>
 ```
 
@@ -204,6 +213,7 @@
 <Button
     dropdown
     dropdownStyle="text"
+    options={options}
     customedValueRenderer={(option) => {
         return (
             <div>
@@ -213,6 +223,7 @@
         );
     }}
 >
+    All Devices
 </Button>
 ```
 
