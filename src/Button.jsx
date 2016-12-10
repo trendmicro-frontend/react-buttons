@@ -119,9 +119,7 @@ Button.defaultProps = {
     dropdown: false,
     iconOnly: false,
     btnSize: 'md',
-    btnStyle: 'default',
-    dropdownStyle: 'single',
-    fixedWidth: false
+    btnStyle: 'default'
 };
 
 export default Button;

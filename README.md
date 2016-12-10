@@ -173,19 +173,17 @@ npm install --save @trendmicro/react-buttons
 
 ### Dropdown Buttons
 
-const options = [
-    { label: 'Action', value: 'v1' },
-    { label: 'Another action', value: 'v2' },
-    { label: 'Something else here', value: 'v3' }
-];
-
 #### Single
 
 ```js
 <Button
     dropdown
     placeholder="Select..."
-    options={options}
+    options={[
+        { label: 'Action', value: 'v1' },
+        { label: 'Another action', value: 'v2' },
+        { label: 'Something else here', value: 'v3' }
+    ]}
     onChange={(selectedOption) => {
         if (selectedOption) {
             console.log('label =' + selectedOption.label + ', value = ' + selectedOption.value);
@@ -201,7 +199,26 @@ const options = [
     dropdown
     dropdownStyle="split"
     placeholder="Select..."
-    options={options}
+    options={[
+        { label: 'Action', value: 'v1' },
+        { label: 'Another action', value: 'v2' },
+        { label: 'Something else here', value: 'v3' }
+    ]}
+/>
+```
+
+#### Fixed width
+```js
+<Button
+    dropdown
+    placeholder="Select..."
+    options={[
+        { label: 'Action', value: 'v1' },
+        { label: 'Another action', value: 'v2' },
+        { label: 'Something else here', value: 'v3' }
+    ]}
+    value="v1"
+    fixedWidth={true}
 />
 ```
 
@@ -211,7 +228,11 @@ const options = [
 <Button
     dropdown
     dropdownStyle="text"
-    options={options}
+    options={[
+        { label: 'Action', value: 'v1' },
+        { label: 'Another action', value: 'v2' },
+        { label: 'Something else here', value: 'v3' }
+    ]}
 >
     All Devices
 </Button>
@@ -223,7 +244,11 @@ const options = [
 <Button
     dropdown
     dropdownStyle="text"
-    options={options}
+    options={[
+        { label: 'Action', value: 'v1' },
+        { label: 'Another action', value: 'v2' },
+        { label: 'Something else here', value: 'v3' }
+    ]}
     customedValueRenderer={(option) => {
         return (
             <div>
