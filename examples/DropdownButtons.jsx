@@ -2,11 +2,6 @@ import React from 'react';
 import { Button } from '../src';
 
 export default () => {
-    const options = [
-        { label: 'Action', value: 'v1' },
-        { label: 'Another action', value: 'v2' },
-        { label: 'Something else here', value: 'v3' }
-    ];
     return (
         <div>
             <h4>Drop-down Buttons</h4>
@@ -16,40 +11,73 @@ export default () => {
                 <Button
                     dropdown
                     placeholder="Select..."
-                    options={options}
+                    options={[
+                        { label: 'Action', value: 'v1' },
+                        { label: 'Another action', value: 'v2' },
+                        { label: 'Something else here', value: 'v3' }
+                    ]}
                     onChange={(selectedOption) => {
                         if (selectedOption) {
                             console.log('label =' + selectedOption.label + ', value = ' + selectedOption.value);
                         }
                     }}
                 />
-                <br /><br />
-
+            </div>
+            <div>
                 <p><strong>Split</strong></p>
                 <Button
                     dropdown
                     dropdownStyle="split"
                     placeholder="Select..."
-                    options={options}
+                    options={[
+                        { label: 'Action', value: 'v1' },
+                        { label: 'Another action', value: 'v2' },
+                        { label: 'Something else here', value: 'v3' }
+                    ]}
                     value="v1"
                 />
-                <br /><br />
-
+            </div>
+            <br /><br />
+            <div>
+                <p><strong>Fixed width</strong></p>
+                <Button
+                    dropdown
+                    placeholder="Select..."
+                    options={[
+                        { label: 'Action', value: 'v1' },
+                        { label: 'Another action', value: 'v2' },
+                        { label: 'Something else here', value: 'v3' }
+                    ]}
+                    value="v1"
+                    fixedWidth={true}
+                />
+            </div>
+            <br /><br />
+            <div>
                 <p><strong>Text</strong></p>
                 <Button
                     dropdown
                     dropdownStyle="text"
-                    options={options}
+                    options={[
+                        { label: 'Action', value: 'v1' },
+                        { label: 'Another action', value: 'v2' },
+                        { label: 'Something else here', value: 'v3' }
+                    ]}
                 >
                     All Devices
                 </Button>
-                <br /><br />
-
+            </div>
+            <div>
                 <p><strong>Icon</strong></p>
                 <Button
                     dropdown
                     dropdownStyle="text"
-                    options={options}
+                    options={[
+                        { label: 'Action', value: 'v1' },
+                        { label: 'Another action', value: 'v2' },
+                        { label: 'Something else here', value: 'v3' }
+                    ]}
+                    value="v1"
                     customedValueRenderer={(option) => {
                         return (
                             <div>
@@ -58,10 +86,10 @@ export default () => {
                             </div>
                         );
                     }}
-                >
-                    All Devices
-                </Button>
-
+                />
+            </div>
+            <br /><br />
+            <div>
                 <p><strong>Sizes</strong></p>
                 <Button btnSize="large" dropdown>Large</Button>
                 <Button btnSize="medium" dropdown>Default</Button>

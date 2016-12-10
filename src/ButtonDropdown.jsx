@@ -293,18 +293,34 @@ class ButtonDropdown extends Component {
         if (!this.props.dropdown || this.props.disabled) {
             return null;
         }
-        const { isReady } = this.state;
-        return (
-            <ul
-                ref="menu"
-                className={classNames(
-                    styles['dropdown-menu'],
-                    { [styles.ready]: isReady }
-                )}
-            >
-                {this.renderMenuOptions()}
-            </ul>
-        );
+        const { isReady, options } = this.state;
+        if (options && options.length) {
+            return (
+                <ul
+                    ref="menu"
+                    className={classNames(
+                        styles['dropdown-menu'],
+                        { [styles.ready]: isReady }
+                    )}
+                >
+                    {this.renderMenuOptions()}
+                </ul>
+            );
+        } else if (this.props.noOptionsText) {
+            return (
+                <div
+                    ref="menu"
+                    className={classNames(
+                        styles['dropdown-nooptions'],
+                        { [styles.ready]: isReady }
+                    )}
+                >
+                    {this.props.noOptionsText}
+                </div>
+            );
+        } else {
+            return null;
+        }
     }
 
     renderValue () {
@@ -437,11 +453,25 @@ ButtonDropdown.propTypes = {
     value: PropTypes.any,           // initial field value
     options: PropTypes.array,       // array of options
     placeholder: PropTypes.string,  // field placeholder, displayed when there's no value
+    noOptionsText: PropTypes.stringOrNode,    // text displayed when there are no any options
     fixedWidth: PropTypes.bool,     // the width of dropdown and menu are consistent
     customedValueRenderer: React.PropTypes.func,    // customedValueRenderer: function (option) {}
     customedOptionRenderer: React.PropTypes.func,   // renders a custom menu with options
     onChange: PropTypes.func       // onChange handler: function (newValue) {}
 };
-
+ButtonDropdown.defaultProps = {
+    hover: false,
+    active: false,
+    focus: false,
+    disabled: false,
+    block: false,
+    dropdown: true,
+    iconOnly: false,
+    btnSize: 'md',
+    btnStyle: 'default',
+    dropdownStyle: 'single',
+    fixedWidth: false,
+    noOptionsText: 'No options found'
+};
 
 export default ButtonDropdown;

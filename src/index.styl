@@ -671,7 +671,8 @@ input[type="button"] {
         }
     }
 
-    .dropdown-menu {
+    .dropdown-menu,
+    .dropdown-nooptions {
         position: absolute;
         top: 100%;
         left: 0;
@@ -713,9 +714,18 @@ input[type="button"] {
         }
     }
 
+    .dropdown-nooptions {
+        white-space: nowrap;
+        padding: 8px;
+        color: #999;
+    }
+
     &.dropup {
-        .dropdown-menu.ready {
-            display: block;
+        .dropdown-menu,
+        .dropdown-nooptions {
+            &.ready {
+                display: block;
+            }
         }
     }
 
