@@ -3,18 +3,18 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var nib = require('nib');
+var publicname = pkg.name.replace(/^@\w+\//, ''); // Strip out "@trendmicro/" from package name
 var banner = [
-    pkg.name.replace(/^@\w+\//, '') + ' v' + pkg.version,
+    publicname + ' v' + pkg.version,
     '(c) ' + new Date().getFullYear() + ' Trend Micro, Inc.',
     pkg.license,
     pkg.homepage
 ].join(' | ');
+var localClassPrefix = publicname.replace(/^react-/, ''); // Strip out "react-" from publicname
 
 module.exports = {
     devtool: 'source-map',
-    entry: {
-        'react-buttons': path.resolve(__dirname, 'src/index.js')
-    },
+    entry: path.resolve(__dirname, 'src/index.js'),
     output: {
         path: path.join(__dirname, 'lib'),
         filename: 'index.js',
@@ -50,7 +50,7 @@ module.exports = {
                 test: /\.styl$/,
                 loader: ExtractTextPlugin.extract(
                     'style',
-                    'css?-autoprefixer&modules&importLoaders=1&localIdentName=buttons---[local]---[hash:base64:5]!stylus'
+                    'css?-autoprefixer&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]!stylus'
                 )
             },
             {
@@ -66,7 +66,7 @@ module.exports = {
         import: ['~nib/lib/nib/index.styl']
     },
     plugins: [
-        new ExtractTextPlugin('../dist/react-buttons.css'),
+        new ExtractTextPlugin('../dist/' + publicname + '.css'),
         new webpack.BannerPlugin(banner)
     ],
     resolve: {
