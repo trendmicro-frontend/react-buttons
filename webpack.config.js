@@ -3,6 +3,12 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var nib = require('nib');
+var banner = [
+    pkg.name.replace(/^@\w+\//, '') + ' v' + pkg.version,
+    '(c) ' + new Date().getFullYear() + ' Trend Micro, Inc.',
+    pkg.license,
+    pkg.homepage
+].join(' | ');
 
 module.exports = {
     devtool: 'source-map',
@@ -58,7 +64,8 @@ module.exports = {
         import: ['~nib/lib/nib/index.styl']
     },
     plugins: [
-        new ExtractTextPlugin('../dist/react-buttons.css')
+        new ExtractTextPlugin('../dist/react-buttons.css'),
+        new webpack.BannerPlugin(banner)
     ],
     resolve: {
         extensions: ['', '.js', '.jsx']
