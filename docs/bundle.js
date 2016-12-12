@@ -21223,14 +21223,9 @@
 	
 	
 	            if (dropdown && fixedWidth) {
-	                var _refs = this.refs,
-	                    btnDropdown = _refs.btnDropdown,
-	                    menu = _refs.menu,
-	                    caret = _refs.caret;
-	
-	                var dropdownWidth = btnDropdown.parentElement.offsetWidth;
-	                var menuWidth = menu.offsetWidth;
-	                var caretWidth = dropdownStyle === 'split' ? btnDropdown.offsetWidth : caret.offsetWidth;
+	                var dropdownWidth = this.btnDropdown.parentElement.offsetWidth;
+	                var menuWidth = this.menu.offsetWidth;
+	                var caretWidth = dropdownStyle === 'split' ? this.btnDropdown.offsetWidth : this.caret.offsetWidth;
 	                var newWidth = 0;
 	
 	                menuWidth += caretWidth;
@@ -21255,8 +21250,8 @@
 	            if (!size) {
 	                return;
 	            }
-	            this.refs.btnDropdown.parentElement.style.width = size.width + 'px';
-	            this.refs.menu.style.width = size.width + 'px';
+	            this.btnDropdown.parentElement.style.width = size.width + 'px';
+	            this.menu.style.width = size.width + 'px';
 	        }
 	    }, {
 	        key: 'getDefaultState',
@@ -21306,7 +21301,7 @@
 	    }, {
 	        key: 'focusButton',
 	        value: function focusButton() {
-	            this.refs.btnDropdown.focus();
+	            this.btnDropdown.focus();
 	        }
 	    }, {
 	        key: 'focusOption',
@@ -21468,6 +21463,8 @@
 	    }, {
 	        key: 'renderMenu',
 	        value: function renderMenu() {
+	            var _this5 = this;
+	
 	            if (!this.props.dropdown || this.props.disabled) {
 	                return null;
 	            }
@@ -21479,7 +21476,9 @@
 	                return _react2.default.createElement(
 	                    'ul',
 	                    {
-	                        ref: 'menu',
+	                        ref: function ref(node) {
+	                            _this5.menu = node;
+	                        },
 	                        className: (0, _classnames2.default)(_index2.default['dropdown-menu'], _defineProperty({}, _index2.default.ready, isReady))
 	                    },
 	                    this.renderMenuOptions()
@@ -21488,7 +21487,9 @@
 	                return _react2.default.createElement(
 	                    'div',
 	                    {
-	                        ref: 'menu',
+	                        ref: function ref(node) {
+	                            _this5.menu = node;
+	                        },
 	                        className: (0, _classnames2.default)(_index2.default['dropdown-nooptions'], _defineProperty({}, _index2.default.ready, isReady))
 	                    },
 	                    this.props.noOptionsText
@@ -21529,10 +21530,14 @@
 	    }, {
 	        key: 'renderArrow',
 	        value: function renderArrow() {
+	            var _this6 = this;
+	
 	            return _react2.default.createElement(
 	                'div',
 	                {
-	                    ref: 'caret',
+	                    ref: function ref(node) {
+	                        _this6.caret = node;
+	                    },
 	                    className: (0, _classnames2.default)(_index2.default['select-arrow-zone'])
 	                },
 	                _react2.default.createElement('span', { className: _index2.default.caret })
@@ -21541,6 +21546,8 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this7 = this;
+	
 	            var _props4 = this.props,
 	                className = _props4.className,
 	                hover = _props4.hover,
@@ -21575,7 +21582,9 @@
 	                _react2.default.createElement(
 	                    'button',
 	                    {
-	                        ref: 'btnDropdown',
+	                        ref: function ref(node) {
+	                            _this7.btnDropdown = node;
+	                        },
 	                        type: 'button',
 	                        className: (0, _classnames2.default)(_index2.default.btn, _index2.default['dropdown-toggle'], _defineProperty({}, _index2.default['btn-border'], dropdownStyle === 'single' || isSplitLayout), _defineProperty({}, _index2.default['btn-link'], dropdownStyle === 'text'), _defineProperty({}, _index2.default.hover, hover || isOpen), _defineProperty({}, _index2.default.active, active), _defineProperty({}, _index2.default.focus, focus)),
 	                        disabled: !!disabled,
