@@ -4,12 +4,15 @@
   "description": "Trend Micro Components: React Buttons",
   "main": "lib/index.js",
   "files": [
+    "dist",
     "lib"
   ],
   "scripts": {
-    "prepublish": "npm run lint && npm test && npm run build && npm run build-examples",
-    "build": "webpack",
+    "prepublish": "npm run lint && npm test && npm run clean && npm run build && npm run build-examples",
+    "clean": "rm -f {lib,dist}/*",
+    "build": "webpack && npm run cleancss",
     "build-examples": "cd examples; webpack; cp -af index.html ../docs/index.html",
+    "cleancss": "cleancss -o dist/react-buttons.min.css dist/react-buttons.css",
     "demo": "http-server -p 8000 docs/",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
@@ -50,7 +53,7 @@
     "react": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
-    "classnames": "~2.2.5"
+    "classnames": "^2.2.5"
   },
   "devDependencies": {
     "babel-cli": "~6.18.0",
@@ -61,6 +64,7 @@
     "babel-preset-es2015": "~6.18.0",
     "babel-preset-react": "~6.16.0",
     "babel-preset-stage-0": "~6.16.0",
+    "clean-css": "~3.4.21",
     "coveralls": "~2.11.15",
     "css-loader": "~0.26.1",
     "eslint": "~3.11.1",
