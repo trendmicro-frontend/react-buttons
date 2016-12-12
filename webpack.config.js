@@ -65,7 +65,7 @@ module.exports = {
                 test: /\.styl$/,
                 loader: ExtractTextPlugin.extract(
                     'style',
-                    'css?-autoprefixer&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]!stylus'
+                    'css?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=' + localClassPrefix + '---[local]---[hash:base64:5]!stylus'
                 )
             },
             {

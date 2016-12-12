@@ -37,7 +37,7 @@ module.exports = {
                 test: /\.styl$/,
                 loaders: [
                     'style',
-                    'css?-autoprefixer&modules&importLoaders=1&localIdentName=[hash:base64:5]',
+                    'css?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]',
                     'stylus'
                 ]
             },
