@@ -10,6 +10,15 @@ Demo: https://trendmicro-frontend.github.io/react-buttons
 npm install --save @trendmicro/react-buttons
 ```
 
+At this point you can import `@trendmicro/react-buttons` and its styles in your application as follows:
+
+```js
+import { Button, ButtonGroup, ButtonToolbar, ButtonDropdown } from '@trendmicro/react-buttons';
+
+// Be sure to include styles at some point, probably during your bootstraping
+import '@trendmicro/react-buttons/dist/react-buttons.css';
+```
+
 ## Usage
 
 ### Button Styles
