@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
-import _ from 'lodash';
 import styles from './index.styl';
 import ButtonGroup from './ButtonGroup';
 
@@ -133,20 +132,22 @@ class ButtonDropdown extends Component {
         } = this.props;
         let focusedOption;
         let initItems;
-        if (dropdown && !_.isEmpty(options)) {
+        if (dropdown && Array.isArray(options)) {
             let isChecked;
             // Get default selected option(s) for renderValue function
-            initItems = _.map(options, (option, i) => {
+            initItems = options.map((option, i) => {
                 isChecked = (option.value === value);
                 const tempObj = {
                     value: option.value,
                     label: option.label,
-                    id: _.uniqueId('option_item_'),
+                    id: `option_item_${i}`,
                     checked: isChecked
                 };
                 return tempObj;
             });
-            focusedOption = _.find(initItems, ['checked', true]);
+            focusedOption = initItems.find((item) => {
+                return item.checked === true;
+            });
         }
 
         return {
@@ -195,11 +196,11 @@ class ButtonDropdown extends Component {
             });
             return;
         }
-        if (_.isEmpty(options)) {
+        if (!Array.isArray(options)) {
             return;
         }
         let focusedIndex = -1;
-        focusedIndex = _.findIndex(options, focusedOption);
+        focusedIndex = options.indexOf(focusedOption);
 
         if (dir === 'next' && focusedIndex !== -1) {
             focusedIndex = (focusedIndex + 1) % options.length;
@@ -224,7 +225,14 @@ class ButtonDropdown extends Component {
     }
 
     getSelectedOptions() {
-        return _.filter(this.state.options, ['checked', true]);
+        const { options } = this.state;
+        let selectedOptions = [];
+        if (Array.isArray(options)) {
+            selectedOptions = options.filter((item) => {
+                return item.checked === true;
+            });
+        }
+        return selectedOptions;
     }
 
     selectValue (item) {
@@ -238,11 +246,15 @@ class ButtonDropdown extends Component {
 
     updateValue (option) {
         let newOptions = this.state.options;
-        let prevSelectedOption = _.find(newOptions, ['checked', true]);
+        let prevSelectedOption = newOptions.find((item) => {
+            return item.checked === true;
+        });
         if (prevSelectedOption) {
             prevSelectedOption.checked = false;
         }
-        let selectedIndex = _.findIndex(newOptions, ['value', option.value]);
+        let selectedIndex = newOptions.findIndex((item) => {
+            return item.value === option.value;
+        });
         newOptions[selectedIndex].checked = true;
         this.setValue(newOptions);
     }
@@ -253,7 +265,7 @@ class ButtonDropdown extends Component {
         }, () => {
             const value = this.getSelectedOptions();
             let returnValue = value;
-            if (value) {
+            if (value.length > 0) {
                 returnValue = value[0];
             }
             this.props.onChange(returnValue);
@@ -261,7 +273,7 @@ class ButtonDropdown extends Component {
     }
 
     renderMenuOptions () {
-        const { customedOptionRenderer } = this.props;
+        const { customOptionRenderer } = this.props;
         const { focusedOption, options } = this.state;
         const {
             handleOptionChanged,
@@ -271,8 +283,8 @@ class ButtonDropdown extends Component {
         const defaultMenuOption = (item) => {
             return this.getOptionLabel(item);
         };
-        const renderLabel = customedOptionRenderer || defaultMenuOption;
-        return _.map(options, (item, key) => {
+        const renderLabel = customOptionRenderer || defaultMenuOption;
+        return options.map((item, key) => {
             return (
                 <li key={`option_${key}`}>
                     <a
@@ -327,16 +339,16 @@ class ButtonDropdown extends Component {
         const {
             placeholder,
             children,
-            customedValueRenderer
+            customValueRenderer
         } = this.props;
         const selectedOption = this.getSelectedOptions();
         let el = children;
-        if (_.isEmpty(selectedOption)) {
-            if (!_.isEmpty(placeholder)) {
+        if (selectedOption.length === 0) {
+            if (placeholder) {
                 el = (<span>{placeholder}</span>);
             }
         } else {
-            const renderLabel = customedValueRenderer || this.getOptionLabel;
+            const renderLabel = customValueRenderer || this.getOptionLabel;
             el = renderLabel(selectedOption[0]);
         }
 
@@ -453,10 +465,13 @@ ButtonDropdown.propTypes = {
     value: PropTypes.any,           // initial field value
     options: PropTypes.array,       // array of options
     placeholder: PropTypes.string,  // field placeholder, displayed when there's no value
-    noOptionsText: PropTypes.stringOrNode,    // text displayed when there are no any options
+    noOptionsText: PropTypes.oneOfType([    // text displayed when there are no any options
+        React.PropTypes.string,
+        React.PropTypes.noe
+    ]),
     fixedWidth: PropTypes.bool,     // the width of dropdown and menu are consistent
-    customedValueRenderer: React.PropTypes.func,    // customedValueRenderer: function (option) {}
-    customedOptionRenderer: React.PropTypes.func,   // renders a custom menu with options
+    customValueRenderer: React.PropTypes.func,    // customValueRenderer: function (option) {}
+    customOptionRenderer: React.PropTypes.func,   // renders a custom menu with options
     onChange: PropTypes.func       // onChange handler: function (newValue) {}
 };
 ButtonDropdown.defaultProps = {

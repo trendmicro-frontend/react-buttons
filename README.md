@@ -249,7 +249,7 @@ npm install --save @trendmicro/react-buttons
         { label: 'Another action', value: 'v2' },
         { label: 'Something else here', value: 'v3' }
     ]}
-    customedValueRenderer={(option) => {
+    customValueRenderer={(option) => {
         return (
             <div>
                 <i className="fa fa-database" />
