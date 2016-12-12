@@ -20,7 +20,9 @@ module.exports = {
         filename: 'index.js',
         libraryTarget: 'commonjs2'
     },
-    externals: Object.keys(pkg.dependencies),
+    externals: []
+        .concat(Object.keys(pkg.peerDependencies))
+        .concat(Object.keys(pkg.dependencies)),
     module: {
         preLoaders: [
             // http://survivejs.com/webpack_react/linting_in_webpack/
