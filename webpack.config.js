@@ -1,4 +1,6 @@
+var fs = require('fs');
 var pkg = require('./package.json');
+var bower = require('./bower.json');
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -11,6 +13,19 @@ var banner = [
     pkg.homepage
 ].join(' | ');
 var localClassPrefix = publicname.replace(/^react-/, ''); // Strip out "react-" from publicname
+
+// Update bower.json
+Object.keys(bower).forEach((key) => {
+    bower[key] = pkg[key] || bower[key];
+});
+bower.authors = pkg.contributors.map((author) => {
+    return {
+        name: author.name,
+        email: author.email,
+        homepage: author.url
+    };
+});
+fs.writeFileSync('bower.json', JSON.stringify(bower, null, 2), 'utf8');
 
 module.exports = {
     devtool: 'source-map',
