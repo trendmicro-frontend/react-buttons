@@ -7,6 +7,7 @@ Demo: https://trendmicro-frontend.github.io/react-buttons
 ## Installation
 
 ```
+npm install --save react@latest
 npm install --save @trendmicro/react-buttons
 ```
 
