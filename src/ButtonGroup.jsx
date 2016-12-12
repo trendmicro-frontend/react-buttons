@@ -33,7 +33,7 @@ ButtonGroup.propTypes = {
     vertical: PropTypes.bool
 };
 ButtonGroup.defaultProps = {
-    btnSize: '', // Defaults to empty string
+    btnSize: 'md', // Defaults to medium size
     vertical: false
 };
 
