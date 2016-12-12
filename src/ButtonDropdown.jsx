@@ -88,14 +88,9 @@ class ButtonDropdown extends Component {
         } = this.props;
 
         if (dropdown && fixedWidth) {
-            const {
-                btnDropdown,
-                menu,
-                caret
-            } = this.refs;
-            const dropdownWidth = btnDropdown.parentElement.offsetWidth;
-            let menuWidth = menu.offsetWidth;
-            let caretWidth = (dropdownStyle === 'split' ? btnDropdown.offsetWidth : caret.offsetWidth);
+            const dropdownWidth = this.btnDropdown.parentElement.offsetWidth;
+            let menuWidth = this.menu.offsetWidth;
+            let caretWidth = (dropdownStyle === 'split' ? this.btnDropdown.offsetWidth : this.caret.offsetWidth);
             let newWidth = 0;
 
             menuWidth += caretWidth;
@@ -119,8 +114,8 @@ class ButtonDropdown extends Component {
         if (!size) {
             return;
         }
-        this.refs.btnDropdown.parentElement.style.width = `${size.width}px`;
-        this.refs.menu.style.width = `${size.width}px`;
+        this.btnDropdown.parentElement.style.width = `${size.width}px`;
+        this.menu.style.width = `${size.width}px`;
     }
 
     getDefaultState () {
@@ -165,7 +160,7 @@ class ButtonDropdown extends Component {
     }
 
     focusButton () {
-        this.refs.btnDropdown.focus();
+        this.btnDropdown.focus();
     }
 
     focusOption (event) {
@@ -309,7 +304,9 @@ class ButtonDropdown extends Component {
         if (options && options.length) {
             return (
                 <ul
-                    ref="menu"
+                    ref={node => {
+                        this.menu = node;
+                    }}
                     className={classNames(
                         styles['dropdown-menu'],
                         { [styles.ready]: isReady }
@@ -321,7 +318,9 @@ class ButtonDropdown extends Component {
         } else if (this.props.noOptionsText) {
             return (
                 <div
-                    ref="menu"
+                    ref={node => {
+                        this.menu = node;
+                    }}
                     className={classNames(
                         styles['dropdown-nooptions'],
                         { [styles.ready]: isReady }
@@ -362,7 +361,9 @@ class ButtonDropdown extends Component {
     renderArrow () {
         return (
             <div
-                ref="caret"
+                ref={node => {
+                    this.caret = node;
+                }}
                 className={classNames(
                     styles['select-arrow-zone']
                 )}
@@ -415,7 +416,9 @@ class ButtonDropdown extends Component {
                     </button>
                 }
                 <button
-                    ref="btnDropdown"
+                    ref={node => {
+                        this.btnDropdown = node;
+                    }}
                     type="button"
                     className={classNames(
                         styles.btn,
