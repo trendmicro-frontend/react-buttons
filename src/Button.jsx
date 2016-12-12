@@ -105,9 +105,13 @@ Button.propTypes = {
     value: PropTypes.any,           // initial field value
     options: PropTypes.array,       // array of options
     placeholder: PropTypes.string,  // field placeholder, displayed when there's no value
+    noOptionsText: PropTypes.oneOfType([    // text displayed when there are no any options
+        React.PropTypes.string,
+        React.PropTypes.noe
+    ]),
     fixedWidth: PropTypes.bool,     // the width of dropdown and menu are consistent
-    customedValueRenderer: React.PropTypes.func,    // customedValueRenderer: function (option) {}
-    customedOptionRenderer: React.PropTypes.func,   // renders a custom menu with options
+    customValueRenderer: React.PropTypes.func,    // customValueRenderer: function (option) {}
+    customOptionRenderer: React.PropTypes.func,   // renders a custom menu with options
     onChange: PropTypes.func       // onChange handler: function (newValue) {}
 };
 Button.defaultProps = {

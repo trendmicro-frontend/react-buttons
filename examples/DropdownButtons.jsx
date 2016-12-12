@@ -78,7 +78,7 @@ export default () => {
                         { label: 'Something else here', value: 'v3' }
                     ]}
                     value="v1"
-                    customedValueRenderer={(option) => {
+                    customValueRenderer={(option) => {
                         return (
                             <div>
                                 <i className="fa fa-database" />
