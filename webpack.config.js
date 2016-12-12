@@ -6,7 +6,7 @@ var nib = require('nib');
 var publicname = pkg.name.replace(/^@\w+\//, ''); // Strip out "@trendmicro/" from package name
 var banner = [
     publicname + ' v' + pkg.version,
-    '(c) ' + new Date().getFullYear() + ' Trend Micro, Inc.',
+    '(c) ' + new Date().getFullYear() + ' Trend Micro Inc.',
     pkg.license,
     pkg.homepage
 ].join(' | ');
