@@ -2,6 +2,8 @@
 
 [![NPM](https://nodei.co/npm/@trendmicro/react-buttons.png?downloads=true&stars=true)](https://nodei.co/npm/@trendmicro/react-buttons/)
 
+React Buttons component.
+
 Demo: https://trendmicro-frontend.github.io/react-buttons
 
 ## Installation
