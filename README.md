@@ -11,7 +11,7 @@ Demo: https://trendmicro-frontend.github.io/react-buttons
 1. Install the latest version of [react](https://github.com/facebook/react) and [react-buttons](https://github.com/trendmicro-frontend/react-buttons):
 
   ```
-  npm install --save react @trendmicro/react-bttons
+  npm install --save react @trendmicro/react-buttons
   ```
 
 2. At this point you can import `@trendmicro/react-buttons` and its styles in your application as follows:
