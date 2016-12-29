@@ -21911,7 +21911,7 @@
 	        _react2.default.createElement(
 	            'h4',
 	            null,
-	            'Button Sizes'
+	            'Button States'
 	        ),
 	        _react2.default.createElement(
 	            'div',
@@ -22535,4 +22535,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bundle.js.map?dd65a14f9cea8cd2dfa0
+//# sourceMappingURL=bundle.js.map?1841726fa67efba2d64b

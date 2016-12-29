@@ -4,7 +4,7 @@ import { Button } from '../src';
 export default () => {
     return (
         <div>
-            <h4>Button Sizes</h4>
+            <h4>Button States</h4>
             <div>
                 <Button>Normal</Button>
                 <Button btnStyle="primary">Normal</Button>
