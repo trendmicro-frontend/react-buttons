@@ -64,6 +64,7 @@
         .fa {
             font-size: 14px;
             margin-right: 8px;
+            color: #666;
         }
     }
 
@@ -71,16 +72,6 @@
         :global {
             .fa {
                 margin-right: 0;
-            }
-        }
-    }
-    &.btn-lg,
-    &.btn-md,
-    &.btn-sm,
-    &.btn-xs {
-        :global {
-            .fa {
-                font-size: inherit;
             }
         }
     }
@@ -150,6 +141,12 @@
     background-repeat: repeat-x;
     border-color: #0095ce;
 
+    :global {
+        .fa {
+            color: inherit;
+        }
+    }
+
     &:active,
     &.active {
         color: #fff;
@@ -196,6 +193,12 @@
     background-image: linear-gradient(to bottom, #e15054 0%, #db3d44 100%);
     background-repeat: repeat-x;
     border-color: #d8262b;
+
+    :global {
+        .fa {
+            color: inherit;
+        }
+    }
 
     &:active,
     &.active {
