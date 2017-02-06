@@ -1,4 +1,4 @@
-/*! react-buttons v0.4.5 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
+/*! react-buttons v0.4.6 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
 .buttons---btn---2jZHN {
   display: inline-block;
   min-width: 80px;
@@ -56,15 +56,10 @@ fieldset[disabled] a .buttons---btn---2jZHN {
 .buttons---btn---2jZHN .fa {
   font-size: 14px;
   margin-right: 8px;
+  color: #666;
 }
 .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW .fa {
   margin-right: 0;
-}
-.buttons---btn---2jZHN.buttons---btn-lg---2xtUV .fa,
-.buttons---btn---2jZHN.buttons---btn-md---HRR_F .fa,
-.buttons---btn---2jZHN.buttons---btn-sm---3cNnY .fa,
-.buttons---btn---2jZHN.buttons---btn-xs---2eEDQ .fa {
-  font-size: inherit;
 }
 .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {
   min-width: 0;
@@ -141,6 +136,9 @@ fieldset[disabled] .buttons---btn-default---1wWXD.buttons---focus---1kVJZ {
   background-repeat: repeat-x;
   border-color: #0095ce;
 }
+.buttons---btn-primary---Wp1wb .fa {
+  color: inherit;
+}
 .buttons---btn-primary---Wp1wb:active,
 .buttons---btn-primary---Wp1wb.buttons---active---2-a32 {
   color: #fff;
@@ -200,6 +198,9 @@ fieldset[disabled] .buttons---btn-primary---Wp1wb.buttons---focus---1kVJZ {
   background-image: linear-gradient(to bottom, #e15054 0%, #db3d44 100%);
   background-repeat: repeat-x;
   border-color: #d8262b;
+}
+.buttons---btn-danger---1UUqU .fa {
+  color: inherit;
 }
 .buttons---btn-danger---1UUqU:active,
 .buttons---btn-danger---1UUqU.buttons---active---2-a32 {
