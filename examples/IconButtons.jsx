@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../src';
+import { Loader } from './components/Loader';
 
 export default () => {
     return (
@@ -19,11 +20,11 @@ export default () => {
 
                 <p><strong>Progressing</strong></p>
                 <Button disabled>
-                    <i className="fa fa-circle-o-notch fa-spin" />
+                    <Loader size="small" />
                     Uploading
                 </Button>
                 <Button btnStyle="primary" disabled>
-                    <i className="fa fa-circle-o-notch fa-spin" />
+                    <Loader size="small" />
                     Uploading
                 </Button>
                 <br /><br />

@@ -83,6 +83,13 @@
         padding-right: 0;
         width: 42px;
     }
+
+    // Loading class within a button
+    > [class*="loader-container"] {
+        display: inline-block;
+        margin-top: 2px;
+        margin-right: 8px;
+    }
 }
 
 // Alternate buttons
@@ -145,6 +152,12 @@
         .fa {
             color: inherit;
         }
+    }
+
+    // Loading class within a primary button
+    > [class*="loader-container"] > [class*="loader"] {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-left-color: #fff;
     }
 
     &:active,
