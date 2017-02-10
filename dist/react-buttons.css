@@ -1,4 +1,4 @@
-/*! react-buttons v0.4.6 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
+/*! react-buttons v0.4.7 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
 .buttons---btn---2jZHN {
   display: inline-block;
   min-width: 80px;
@@ -66,6 +66,11 @@ fieldset[disabled] a .buttons---btn---2jZHN {
   padding-left: 0;
   padding-right: 0;
   width: 42px;
+}
+.buttons---btn---2jZHN > [class*="loader-container"] {
+  display: inline-block;
+  margin-top: 2px;
+  margin-right: 8px;
 }
 .buttons---btn-default---1wWXD {
   color: #222;
@@ -138,6 +143,10 @@ fieldset[disabled] .buttons---btn-default---1wWXD.buttons---focus---1kVJZ {
 }
 .buttons---btn-primary---Wp1wb .fa {
   color: inherit;
+}
+.buttons---btn-primary---Wp1wb > [class*="loader-container"] > [class*="loader"] {
+  border-color: rgba(255,255,255,0.4);
+  border-left-color: #fff;
 }
 .buttons---btn-primary---Wp1wb:active,
 .buttons---btn-primary---Wp1wb.buttons---active---2-a32 {
