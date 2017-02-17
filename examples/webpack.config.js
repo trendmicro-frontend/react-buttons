@@ -88,11 +88,11 @@ module.exports = {
     // https://webpack.github.io/docs/webpack-dev-server.html#additional-configuration-options
     devServer: {
         noInfo: false,
-        quite: false,
         lazy: false,
         // https://webpack.github.io/docs/node.js-api.html#compiler
         watchOptions: {
-            poll: true // use polling instead of native watchers
+            poll: true, // use polling instead of native watchers
+            ignored: /node_modules/
         }
     }
 };
