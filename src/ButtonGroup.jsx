@@ -3,18 +3,18 @@ import React, { PropTypes } from 'react';
 import styles from './index.styl';
 
 const ButtonGroup = ({ className, btnSize, vertical, ...props }) => {
+    const classes = {
+        [styles.btnGroup]: true,
+        [styles.btnGroupLg]: btnSize === 'large' || btnSize === 'lg',
+        [styles.btnGroupMd]: btnSize === 'medium' || btnSize === 'md',
+        [styles.btnGroupSm]: btnSize === 'small' || btnSize === 'sm',
+        [styles.btnGroupXs]: btnSize === 'extra-small' || btnSize === 'xs',
+        [styles.btnGroupVertical]: vertical
+    };
     return (
         <div
             {...props}
-            className={classNames(
-                className,
-                styles['btn-group'],
-                { [styles['btn-group-lg']]: btnSize === 'large' || btnSize === 'lg' },
-                { [styles['btn-group-md']]: btnSize === 'medium' || btnSize === 'md' },
-                { [styles['btn-group-sm']]: btnSize === 'small' || btnSize === 'sm' },
-                { [styles['btn-group-xs']]: btnSize === 'extra-small' || btnSize === 'xs' },
-                { [styles['btn-group-vertical']]: vertical }
-            )}
+            className={classNames(className, classes)}
         />
     );
 };
