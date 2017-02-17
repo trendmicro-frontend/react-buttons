@@ -1,107 +1,120 @@
 import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
+import shallowCompare from 'react-addons-shallow-compare';
 import ButtonDropdown from './ButtonDropdown';
 import styles from './index.styl';
 
-const Button = (props) => {
-    const {
-        className,
-        componentClass,
-        type,
-        btnSize,
-        btnStyle,
-        active,
-        hover,
-        focus,
-        disabled,
-        block,
-        iconOnly,
-        dropdown,
-        ...others
-    } = props;
-    const Component = componentClass;
+class Button extends Component {
+    static propTypes = {
+        componentClass: PropTypes.oneOfType([
+            PropTypes.func,
+            PropTypes.string
+        ]),
+        type: PropTypes.oneOf([
+            'button',
+            'reset',
+            'submit'
+        ]),
+        btnSize: PropTypes.oneOf([
+            'lg',
+            'md',
+            'sm',
+            'xs',
+            'large',
+            'medium',
+            'small',
+            'extra-small'
+        ]),
+        btnStyle: PropTypes.oneOf([
+            'default',
+            'primary',
+            'danger',
+            'emphasis', // alias of "danger"
+            'border',
+            'flat',     // alias of "border"
+            'link'
+        ]),
+        active: PropTypes.bool,
+        hover: PropTypes.bool,
+        focus: PropTypes.bool,
+        disabled: PropTypes.bool,
+        block: PropTypes.bool,
+        iconOnly: PropTypes.bool,
+        dropdown: PropTypes.bool,
 
-    if (dropdown) {
-        return <ButtonDropdown {...props} />;
+        // Apply styles for use in a Dropdown.
+        // This prop will be set automatically when the Button is used inside a Dropdown.
+        dropdownToggle: PropTypes.bool
+    };
+
+    static defaultProps = {
+        componentClass: 'button',
+        type: 'button',
+        btnSize: 'md',
+        btnStyle: 'default',
+        active: false,
+        hover: false,
+        focus: false,
+        disabled: false,
+        block: false,
+        iconOnly: false,
+        dropdown: false,
+        dropdownToggle: false
+    };
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return shallowCompare(this, nextProps, nextState);
     }
+    render() {
+        const {
+            className,
+            componentClass: Component,
+            type,
+            btnSize,
+            btnStyle,
+            active,
+            hover,
+            focus,
+            disabled,
+            block,
+            iconOnly,
+            dropdown,
+            dropdownToggle,
+            ...props
+        } = this.props;
 
-    return (
-        <Component
-            {...others}
-            type={type}
-            className={classNames(
-                className,
-                styles.btn,
-                { [styles['btn-lg']]: btnSize === 'large' || btnSize === 'lg' },
-                { [styles['btn-md']]: btnSize === 'medium' || btnSize === 'md' },
-                { [styles['btn-sm']]: btnSize === 'small' || btnSize === 'sm' },
-                { [styles['btn-xs']]: btnSize === 'extra-small' || btnSize === 'xs' },
-                { [styles['btn-default']]: btnStyle === 'default' },
-                { [styles['btn-primary']]: btnStyle === 'primary' },
-                { [styles['btn-danger']]: btnStyle === 'danger' || btnStyle === 'emphasis' },
-                { [styles['btn-border']]: btnStyle === 'border' || btnStyle === 'flat' },
-                { [styles['btn-link']]: btnStyle === 'link' },
-                { [styles['btn-block']]: block },
-                { [styles['btn-icon-only']]: iconOnly },
-                { [styles.hover]: hover },
-                { [styles.active]: active },
-                { [styles.focus]: focus }
-            )}
-            disabled={!!disabled}
-        />
-    );
-};
+        if (dropdown) {
+            return <ButtonDropdown {...this.props} />;
+        }
 
-Button.propTypes = {
-    componentClass: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.string
-    ]),
-    type: PropTypes.oneOf([
-        'button',
-        'reset',
-        'submit'
-    ]),
-    btnSize: PropTypes.oneOf([
-        'lg',
-        'md',
-        'sm',
-        'xs',
-        'large',
-        'medium',
-        'small',
-        'extra-small'
-    ]),
-    btnStyle: PropTypes.oneOf([
-        'default',
-        'primary',
-        'danger',
-        'emphasis', // alias of "danger"
-        'border',
-        'flat',     // alias of "border"
-        'link'
-    ]),
-    active: PropTypes.bool,
-    hover: PropTypes.bool,
-    focus: PropTypes.bool,
-    disabled: PropTypes.bool,
-    block: PropTypes.bool,
-    iconOnly: PropTypes.bool,
-    dropdown: PropTypes.bool
-};
+        const classes = {
+            [styles.btn]: true,
+            [styles.btnLg]: btnSize === 'large' || btnSize === 'lg',
+            [styles.btnMd]: btnSize === 'medium' || btnSize === 'md',
+            [styles.btnSm]: btnSize === 'small' || btnSize === 'sm',
+            [styles.btnXs]: btnSize === 'extra-small' || btnSize === 'xs',
+            [styles.btnDefault]: btnStyle === 'default',
+            [styles.btnPrimary]: btnStyle === 'primary',
+            [styles.btnDanger]: btnStyle === 'danger' || btnStyle === 'emphasis',
+            [styles.btnBorder]: btnStyle === 'border' || btnStyle === 'flat',
+            [styles.btnLink]: btnStyle === 'link',
+            [styles.btnBlock]: block,
+            [styles.btnIconOnly]: iconOnly,
+            [styles.hover]: hover,
+            [styles.active]: active,
+            [styles.focus]: focus,
+            [styles.dropdownToggle]: dropdownToggle
+        };
 
-Button.defaultProps = {
-    componentClass: 'button',
-    type: 'button',
-    btnSize: 'md',
-    btnStyle: 'default',
-    active: false,
-    hover: false,
-    focus: false,
-    disabled: false,
-    block: false,
-    iconOnly: false,
-    dropdown: false
-};
+        return (
+            <Component
+                {...props}
+                type={type}
+                className={classNames(className, classes)}
+                disabled={disabled}
+            />
+        );
+    }
+}
 
 export default Button;
