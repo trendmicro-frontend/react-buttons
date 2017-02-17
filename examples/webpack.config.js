@@ -1,10 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var stylusLoader = require('stylus-loader');
 var nib = require('nib');
 
 module.exports = {
-    debug: true,
     devtool: 'source-map',
     entry: path.resolve(__dirname, 'index.jsx'),
     output: {
@@ -12,56 +12,59 @@ module.exports = {
         filename: 'bundle.js?[hash]'
     },
     module: {
-        preLoaders: [
+        rules: [
             // http://survivejs.com/webpack_react/linting_in_webpack/
             {
                 test: /\.jsx?$/,
-                loaders: ['eslint'],
+                loader: 'eslint-loader',
+                enforce: 'pre',
                 exclude: /node_modules/
             },
             {
                 test: /\.styl$/,
-                loader: 'stylint'
-            }
-        ],
-        loaders: [
-            {
-                test: /\.json$/,
-                loader: 'json'
+                loader: 'stylint-loader',
+                enforce: 'pre'
             },
             {
                 test: /\.jsx?$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/
             },
             {
                 test: /\.styl$/,
-                loaders: [
-                    'style',
-                    'css?-autoprefixer&camelCase&modules&importLoaders=1&localIdentName=[hash:base64:5]',
-                    'stylus'
+                use: [
+                    'style-loader',
+                    'css-loader?camelCase&modules&importLoaders=1&localIdentName=[local]---[hash:base64:5]',
+                    'stylus-loader'
                 ]
             },
             {
                 test: /\.css$/,
-                loader: 'style!css?-autoprefixer'
+                loader: 'style-loader!css-loader'
             }
         ]
     },
-    stylus: {
-        // nib - CSS3 extensions for Stylus
-        use: [nib()],
-        // no need to have a '@import "nib"' in the stylesheet
-        import: ['~nib/lib/nib/index.styl']
-    },
     plugins: [
+        new webpack.LoaderOptionsPlugin({
+            debug: true,
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new stylusLoader.OptionsPlugin({
+            default: {
+                // nib - CSS3 extensions for Stylus
+                use: [nib()],
+                // no need to have a '@import "nib"' in the stylesheet
+                import: ['~nib/lib/nib/index.styl']
+            }
+        }),
         new HtmlWebpackPlugin({
             filename: '../docs/index.html',
             template: 'index.html'
         })
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['.js', '.json', '.jsx']
     },
     // https://webpack.github.io/docs/webpack-dev-server.html#additional-configuration-options
     devServer: {
