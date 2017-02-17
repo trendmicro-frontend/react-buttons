@@ -24335,7 +24335,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _src = __webpack_require__("../src/index.js");
 
-var _Loader = __webpack_require__("./components/Loader/index.js");
+var _Loader = __webpack_require__("./Loader.jsx");
+
+var _Loader2 = _interopRequireDefault(_Loader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24386,13 +24388,13 @@ exports.default = function () {
             _react2.default.createElement(
                 _src.Button,
                 { disabled: true },
-                _react2.default.createElement(_Loader.Loader, { size: 'small' }),
+                _react2.default.createElement(_Loader2.default, { size: 'small' }),
                 'Uploading'
             ),
             _react2.default.createElement(
                 _src.Button,
                 { btnStyle: 'primary', disabled: true },
-                _react2.default.createElement(_Loader.Loader, { size: 'small' }),
+                _react2.default.createElement(_Loader2.default, { size: 'small' }),
                 'Uploading'
             ),
             _react2.default.createElement('br', null),
@@ -24461,7 +24463,7 @@ exports.default = function () {
 
 /***/ }),
 
-/***/ "./components/Loader/index.js":
+/***/ "./Loader.jsx":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24470,7 +24472,6 @@ exports.default = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Loader = undefined;
 
 __webpack_require__("../node_modules/@trendmicro/react-loader/dist/react-loader.css");
 
@@ -24480,7 +24481,7 @@ var _reactLoader2 = _interopRequireDefault(_reactLoader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.Loader = _reactLoader2.default;
+exports.default = _reactLoader2.default;
 
 /***/ }),
 
@@ -24639,4 +24640,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?a585cb46dfe06f18b57d
+//# sourceMappingURL=bundle.js.map?190f3f44eb0089bcd97d
