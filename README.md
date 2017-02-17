@@ -17,7 +17,7 @@ Demo: https://trendmicro-frontend.github.io/react-buttons
 2. At this point you can import `@trendmicro/react-buttons` and its styles in your application as follows:
 
   ```js
-  import { Button, ButtonGroup, ButtonToolbar, ButtonDropdown } from '@trendmicro/react-buttons';
+  import { Button, ButtonGroup, ButtonToolbar } from '@trendmicro/react-buttons';
 
   // Be sure to include styles at some point, probably during your bootstraping
   import '@trendmicro/react-buttons/dist/react-buttons.css';
@@ -182,106 +182,6 @@ Demo: https://trendmicro-frontend.github.io/react-buttons
 <Button btnStyle="flat" iconOnly>
     <i className="fa fa-cog" />
 </Button>
-```
-
-### Dropdown Buttons
-
-#### Single
-
-```js
-<Button
-    dropdown
-    placeholder="Select..."
-    options={[
-        { label: 'Action', value: 'v1' },
-        { label: 'Another action', value: 'v2' },
-        { label: 'Something else here', value: 'v3' }
-    ]}
-    onChange={(selectedOption) => {
-        if (selectedOption) {
-            console.log('label =' + selectedOption.label + ', value = ' + selectedOption.value);
-        }
-    }}
-/>
-```
-
-#### Split
-
-```js
-<Button
-    dropdown
-    dropdownStyle="split"
-    placeholder="Select..."
-    options={[
-        { label: 'Action', value: 'v1' },
-        { label: 'Another action', value: 'v2' },
-        { label: 'Something else here', value: 'v3' }
-    ]}
-/>
-```
-
-#### Fixed width
-```js
-<Button
-    dropdown
-    placeholder="Select..."
-    options={[
-        { label: 'Action', value: 'v1' },
-        { label: 'Another action', value: 'v2' },
-        { label: 'Something else here', value: 'v3' }
-    ]}
-    value="v1"
-    fixedWidth={true}
-/>
-```
-
-#### Text
-
-```js
-<Button
-    dropdown
-    dropdownStyle="text"
-    options={[
-        { label: 'Action', value: 'v1' },
-        { label: 'Another action', value: 'v2' },
-        { label: 'Something else here', value: 'v3' }
-    ]}
->
-    All Devices
-</Button>
-```
-
-#### Icon
-
-```js
-<Button
-    dropdown
-    dropdownStyle="text"
-    options={[
-        { label: 'Action', value: 'v1' },
-        { label: 'Another action', value: 'v2' },
-        { label: 'Something else here', value: 'v3' }
-    ]}
-    customValueRenderer={(option) => {
-        return (
-            <div>
-                <i className="fa fa-database" />
-                <span>{option.label}</span>
-            </div>
-        );
-    }}
->
-    All Devices
-</Button>
-```
-
-#### Dropdown Sizes
-
-```js
-<Button btnSize="large" dropdown>Large</Button>
-<Button btnSize="medium" dropdown>Default</Button>
-<Button btnSize="small" dropdown>Small</Button>
-<Button btnSize="extra-small" dropdown>Extra Small</Button>
 ```
 
 ## License
