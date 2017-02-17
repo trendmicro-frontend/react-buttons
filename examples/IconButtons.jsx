@@ -5,7 +5,7 @@ import Loader from './Loader';
 export default () => {
     return (
         <div>
-            <h4>Buttons with an Icon</h4>
+            <h4>Icon Buttons</h4>
             <div>
                 <p><strong>Static (default)</strong></p>
                 <Button>
@@ -31,16 +31,16 @@ export default () => {
 
                 <p><strong>Static (flat)</strong></p>
                 <Button btnStyle="flat">
-                    <i className="fa fa-pencil fa-fw" />
-                    Edit
+                    <i className="fa fa-wrench" />
+                    Settings
                 </Button>
                 <Button btnStyle="flat">
-                    <i className="fa fa-trash-o fa-fw" />
-                    Delete
+                    <i className="fa fa-trash" />
+                    Remove
                 </Button>
                 <Button btnStyle="flat">
-                    <i className="fa fa-book fa-fw" />
-                    Library
+                    <i className="fa fa-repeat" />
+                    Refresh
                 </Button>
                 <br /><br />
 
