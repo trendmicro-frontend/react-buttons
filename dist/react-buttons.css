@@ -107,7 +107,7 @@ fieldset[disabled] a .buttons---btn---2jZHN {
   background-image: -ms-linear-gradient(top, #fff 0%, #f5f5f5 100%);
   background-image: linear-gradient(to bottom, #fff 0%, #f5f5f5 100%);
   background-repeat: repeat-x;
-  border-color: #bbb;
+  border-color: #999;
 }
 .buttons---btn-default---1wWXD.buttons---disabled---eCY9b:hover,
 .buttons---btn-default---1wWXD[disabled]:hover,
@@ -301,7 +301,7 @@ fieldset[disabled] .buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {
   background-image: -ms-linear-gradient(top, #f4f4f4 0%, #f4f4f4 100%);
   background-image: linear-gradient(to bottom, #f4f4f4 0%, #f4f4f4 100%);
   background-repeat: repeat-x;
-  border-color: #bbb;
+  border-color: #999;
 }
 .buttons---btn-border---1O58b.buttons---disabled---eCY9b:hover,
 .buttons---btn-border---1O58b[disabled]:hover,
@@ -458,7 +458,7 @@ input[type="button"].buttons---btn-block---1nSNV {
   margin-left: -1px;
 }
 .buttons---btn-group---1jaDo + .buttons---btn-group---1jaDo {
-  margin-left: 4px;
+  margin-left: 8px;
 }
 .buttons---btn-toolbar---2-GfJ {
   margin-left: -5px;
