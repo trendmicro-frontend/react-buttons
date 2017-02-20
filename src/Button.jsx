@@ -1,8 +1,6 @@
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
-import warning from 'warning';
-import ButtonDropdown from './ButtonDropdown';
 import styles from './index.styl';
 
 class Button extends Component {
@@ -42,9 +40,6 @@ class Button extends Component {
         block: PropTypes.bool,
         iconOnly: PropTypes.bool,
 
-        // Dropdown is deprecated and will be removed in a future version.
-        dropdown: PropTypes.bool,
-
         // Apply styles for use in a Dropdown.
         // This prop will be set automatically when the Button is used inside a Dropdown.
         dropdownToggle: PropTypes.bool
@@ -61,7 +56,6 @@ class Button extends Component {
         disabled: false,
         block: false,
         iconOnly: false,
-        dropdown: false, // deprecated
         dropdownToggle: false
     };
 
@@ -81,18 +75,9 @@ class Button extends Component {
             disabled,
             block,
             iconOnly,
-            dropdown, // deprecated
             dropdownToggle,
             ...props
         } = this.props;
-
-        if (dropdown) {
-            warning(false,
-                'Dropdown is deprecated and will be removed in a future version. ' +
-                'For new dropdown component, see https://github.com/trendmicro-frontend/react-dropdown.'
-            );
-            return <ButtonDropdown {...this.props} />;
-        }
 
         const classes = {
             [styles.btn]: true,

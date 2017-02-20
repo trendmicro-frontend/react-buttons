@@ -1,4 +1,4 @@
-/*! react-buttons v0.5.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
+/*! react-buttons v1.0.0-alpha | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
 .buttons---btn---2jZHN {
   display: inline-block;
   min-width: 80px;
@@ -15,6 +15,10 @@
   background-image: none;
   border: 1px solid transparent;
   border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .buttons---btn---2jZHN:focus,
 .buttons---btn---2jZHN:active:focus,
@@ -277,20 +281,6 @@ fieldset[disabled] .buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {
   -ms-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
-.buttons---btn-border---1O58b:active,
-.buttons---btn-border---1O58b.buttons---active---2-a32 {
-  color: #222;
-  background-color: #eee;
-  background-image: none;
-  border-color: #bbb;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-}
-.buttons---btn-border---1O58b:focus,
-.buttons---btn-border---1O58b.buttons---focus---1kVJZ {
-  color: #222;
-  border-color: #0096cc;
-}
 .buttons---btn-border---1O58b:hover,
 .buttons---btn-border---1O58b.buttons---hover---42FF2 {
   color: #222;
@@ -302,6 +292,46 @@ fieldset[disabled] .buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {
   background-image: linear-gradient(to bottom, #f4f4f4 0%, #f4f4f4 100%);
   background-repeat: repeat-x;
   border-color: #999;
+}
+.buttons---btn-border---1O58b:focus,
+.buttons---btn-border---1O58b.buttons---focus---1kVJZ {
+  color: #222;
+  border-color: #0096cc;
+}
+.buttons---btn-border---1O58b:active,
+.buttons---btn-border---1O58b.buttons---active---2-a32,
+.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b {
+  color: #222;
+  background-color: #eee;
+  background-image: none;
+  border-color: #bbb;
+  -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1) inset;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1) inset;
+}
+.buttons---btn-border---1O58b:active:hover,
+.buttons---btn-border---1O58b.buttons---active---2-a32:hover,
+.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b:hover,
+.buttons---btn-border---1O58b:active.buttons---hover---42FF2,
+.buttons---btn-border---1O58b.buttons---active---2-a32.buttons---hover---42FF2,
+.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b.buttons---hover---42FF2,
+.buttons---btn-border---1O58b:active:focus,
+.buttons---btn-border---1O58b.buttons---active---2-a32:focus,
+.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b:focus,
+.buttons---btn-border---1O58b:active.buttons---focus---1kVJZ,
+.buttons---btn-border---1O58b.buttons---active---2-a32.buttons---focus---1kVJZ,
+.buttons---open---1ju75 > .buttons---dropdown-toggle---vMtjL.buttons---btn-border---1O58b.buttons---focus---1kVJZ {
+  color: #222;
+  border-color: #bbb;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+}
+.buttons---btn-border---1O58b.buttons---disabled---eCY9b,
+.buttons---btn-border---1O58b[disabled],
+fieldset[disabled] .buttons---btn-border---1O58b {
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
+  cursor: not-allowed;
 }
 .buttons---btn-border---1O58b.buttons---disabled---eCY9b:hover,
 .buttons---btn-border---1O58b[disabled]:hover,
@@ -584,183 +614,35 @@ input[type="button"].buttons---btn-block---1nSNV {
 .buttons---btn-group-justified---3qB9u > .buttons---btn-group---1jaDo .buttons---dropdown-menu---1fkH0 {
   left: auto;
 }
-.buttons---dropdown---1yvIZ {
-  position: relative;
-  display: inline-block;
-}
-.buttons---dropdown---1yvIZ .buttons---select-value-zone---1WDhx {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-.buttons---dropdown---1yvIZ .buttons---select-value-zone---1WDhx > * {
-  display: inline-block;
-  vertical-align: middle;
-}
-.buttons---dropdown---1yvIZ .buttons---select-arrow-zone---2AKJW {
-  display: inline-block;
-  position: absolute;
-  right: 8px;
-}
-.buttons---dropdown---1yvIZ .buttons---caret---3CkEt {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: middle;
-  border-top: 4px dashed #666;
-  border-top: 4px solid 9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  margin: 8px 0 8px;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-toggle---vMtjL {
+.buttons---dropdown-toggle---vMtjL {
   min-width: 0;
-  position: relative;
+}
+.buttons---dropdown-toggle---vMtjL.buttons---btn---2jZHN {
   text-align: left;
-  width: 100%;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-toggle---vMtjL.buttons---btn---2jZHN {
-  text-align: left;
-  padding-left: 12px;
-  padding-right: 24px;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-toggle---vMtjL.buttons---btn---2jZHN:first-child {
-  margin-left: 0;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4 {
-  padding-left: 0;
-  padding-right: 14px;
-  color: #222;
-  text-decoration: none;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover {
-  color: #0096cc;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover .buttons---caret---3CkEt {
-  border-top-color: #0096cc;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4 .buttons---select-arrow-zone---2AKJW {
-  right: 0;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-menu---1fkH0,
-.buttons---dropdown---1yvIZ .buttons---dropdown-nooptions---Z3N2g {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  float: left;
-  padding: 8px 0;
-  margin: 0;
-  font-size: 13px;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  -webkit-background-clip: padding-box;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  border: 1px solid #bbb;
-  border: 1px solid #bbb;
-  border-radius: 0;
-  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-menu---1fkH0 > li > a,
-.buttons---dropdown---1yvIZ .buttons---dropdown-nooptions---Z3N2g > li > a {
-  display: block;
-  padding: 4px 16px;
-  clear: both;
-  font-weight: normal;
-  line-height: 20px;
-  color: #222;
-  white-space: nowrap;
-  text-decoration: none;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-menu---1fkH0 > li > a:hover,
-.buttons---dropdown---1yvIZ .buttons---dropdown-nooptions---Z3N2g > li > a:hover,
-.buttons---dropdown---1yvIZ .buttons---dropdown-menu---1fkH0 > li > a:focus,
-.buttons---dropdown---1yvIZ .buttons---dropdown-nooptions---Z3N2g > li > a:focus,
-.buttons---dropdown---1yvIZ .buttons---dropdown-menu---1fkH0 > li > a.buttons---focus---1kVJZ,
-.buttons---dropdown---1yvIZ .buttons---dropdown-nooptions---Z3N2g > li > a.buttons---focus---1kVJZ {
-  color: #222;
-  background-color: #eee;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-menu---1fkH0.buttons---ready---m-e-B,
-.buttons---dropdown---1yvIZ .buttons---dropdown-nooptions---Z3N2g.buttons---ready---m-e-B {
-  display: none;
-}
-.buttons---dropdown---1yvIZ .buttons---dropdown-nooptions---Z3N2g {
-  white-space: nowrap;
-  padding: 8px;
-  color: #999;
-}
-.buttons---dropdown---1yvIZ.buttons---dropup---30DnN .buttons---dropdown-menu---1fkH0.buttons---ready---m-e-B,
-.buttons---dropdown---1yvIZ.buttons---dropup---30DnN .buttons---dropdown-nooptions---Z3N2g.buttons---ready---m-e-B {
-  display: block;
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group-lg---3C8An .buttons---caret---3CkEt,
-.buttons---dropdown---1yvIZ .buttons---btn-lg---2xtUV .buttons---caret---3CkEt {
-  border-width: 5px 5px 0;
-  border-bottom-width: 0;
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ > .buttons---btn---2jZHN:first-child {
-  width: calc(100% - 25px);
-  text-align: left;
-  cursor: default;
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ > .buttons---btn---2jZHN:first-child.buttons---btn-border---1O58b {
-  background-color: #fff !important;
-  background-image: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border-color: #ccc !important;
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ > .buttons---btn---2jZHN + .buttons---dropdown-toggle---vMtjL {
-  width: auto;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ .buttons---select-arrow-zone---2AKJW {
-  position: static;
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ.buttons---dropup---30DnN .buttons---caret---3CkEt {
-  border-bottom: 4px dashed #666;
-  border-bottom: 4px solid 9;
-  border-width: 0 4px 4px;
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ.buttons---btn-group-lg---3C8An .buttons---btn---2jZHN:first-child,
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ .buttons---btn-lg---2xtUV .buttons---btn---2jZHN:first-child {
-  width: calc(100% - 35px);
-}
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ.buttons---btn-group-lg---3C8An .buttons---dropdown-toggle---vMtjL,
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ .buttons---btn-lg---2xtUV .buttons---dropdown-toggle---vMtjL {
   padding-left: 12px;
   padding-right: 12px;
 }
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ.buttons---btn-group-lg---3C8An .buttons---caret---3CkEt,
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ .buttons---btn-lg---2xtUV .buttons---caret---3CkEt {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.buttons---dropdown-toggle---vMtjL.buttons---btn-icon-only---NYhkW {
+  text-align: center;
 }
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ.buttons---btn-group-lg---3C8An.buttons---dropup---30DnN .buttons---caret---3CkEt,
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ .buttons---btn-lg---2xtUV.buttons---dropup---30DnN .buttons---caret---3CkEt {
-  border-width: 0 5px 5px;
+.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4 {
+  color: #222;
+  padding-left: 0;
+  padding-right: 0;
+  text-decoration: none;
 }
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ.buttons---btn-group-sm---3_QLf .buttons---caret---3CkEt,
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ .buttons---btn-sm---3cNnY .buttons---caret---3CkEt,
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ.buttons---btn-group-xs---1c4pb .buttons---caret---3CkEt,
-.buttons---dropdown---1yvIZ.buttons---btn-group---1jaDo.buttons---dropdown-split---3C0pZ .buttons---btn-xs---2eEDQ .buttons---caret---3CkEt {
-  margin-top: 7px;
-  margin-bottom: 7px;
+.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover,
+.buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4:hover > * {
+  color: #0096cc;
+}
+.buttons---btn-group---1jaDo > .buttons---btn---2jZHN + .buttons---dropdown-toggle---vMtjL {
+  padding-left: 8px;
+  padding-right: 8px;
+  min-width: 0;
+}
+.buttons---btn-group---1jaDo > .buttons---btn-lg---2xtUV + .buttons---dropdown-toggle---vMtjL {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 [data-toggle="buttons"] > .buttons---btn---2jZHN input[type="radio"],
 [data-toggle="buttons"] > .buttons---btn-group---1jaDo > .buttons---btn---2jZHN input[type="radio"],
