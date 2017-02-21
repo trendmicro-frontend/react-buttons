@@ -38,7 +38,6 @@ ButtonGroup.propTypes = {
     dropdownOpen: PropTypes.bool
 };
 ButtonGroup.defaultProps = {
-    btnSize: '', // Defaults to empty
     vertical: false,
     dropdownOpen: false
 };
