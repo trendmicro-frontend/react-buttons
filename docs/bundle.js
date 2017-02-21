@@ -22987,7 +22987,6 @@ ButtonGroup.propTypes = {
     dropdownOpen: _react.PropTypes.bool
 };
 ButtonGroup.defaultProps = {
-    btnSize: '', // Defaults to empty
     vertical: false,
     dropdownOpen: false
 };
@@ -24237,4 +24236,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?743462ccef0a9a53efa6
+//# sourceMappingURL=bundle.js.map?d75e1babb9c9d44f7117
