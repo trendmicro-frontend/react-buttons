@@ -1,4 +1,4 @@
-/*! react-buttons v1.0.0-alpha | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
+/*! react-buttons v1.0.0-alpha.1 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
 .buttons---btn---2jZHN {
   display: inline-block;
   min-width: 80px;
@@ -56,14 +56,6 @@ fieldset[disabled] a .buttons---btn---2jZHN {
 }
 .buttons---btn---2jZHN + .buttons---btn---2jZHN {
   margin-left: 8px;
-}
-.buttons---btn---2jZHN .fa {
-  font-size: 14px;
-  margin-right: 8px;
-  color: #666;
-}
-.buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW .fa {
-  margin-right: 0;
 }
 .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {
   min-width: 0;
@@ -145,9 +137,6 @@ fieldset[disabled] .buttons---btn-default---1wWXD.buttons---focus---1kVJZ {
   background-repeat: repeat-x;
   border-color: #0095ce;
 }
-.buttons---btn-primary---Wp1wb .fa {
-  color: inherit;
-}
 .buttons---btn-primary---Wp1wb > [class*="loader-container"] > [class*="loader"] {
   border-color: rgba(255,255,255,0.4);
   border-left-color: #fff;
@@ -211,9 +200,6 @@ fieldset[disabled] .buttons---btn-primary---Wp1wb.buttons---focus---1kVJZ {
   background-image: linear-gradient(to bottom, #e15054 0%, #db3d44 100%);
   background-repeat: repeat-x;
   border-color: #d8262b;
-}
-.buttons---btn-danger---1UUqU .fa {
-  color: inherit;
 }
 .buttons---btn-danger---1UUqU:active,
 .buttons---btn-danger---1UUqU.buttons---active---2-a32 {
@@ -651,6 +637,49 @@ input[type="button"].buttons---btn-block---1nSNV {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
+}
+.buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW .fa {
+  margin-right: 0;
+}
+.buttons---btn---2jZHN .fa {
+  font-size: 14px;
+  margin-right: 8px;
+}
+.buttons---btn---2jZHN i.fa,
+.buttons---btn---2jZHN span.fa {
+  font-size: 14px;
+  color: #666;
+}
+.buttons---btn-primary---Wp1wb i.fa,
+.buttons---btn-danger---1UUqU i.fa,
+.buttons---btn-primary---Wp1wb span.fa,
+.buttons---btn-danger---1UUqU span.fa {
+  color: inherit;
+}
+.buttons---btn-lg---2xtUV.buttons---btn---2jZHN i.fa,
+.buttons---btn-sm---3cNnY.buttons---btn---2jZHN i.fa,
+.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN i.fa,
+.buttons---btn-lg---2xtUV.buttons---btn---2jZHN span.fa,
+.buttons---btn-sm---3cNnY.buttons---btn---2jZHN span.fa,
+.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN span.fa {
+  font-size: inherit;
+}
+.buttons---btn-lg---2xtUV.buttons---btn---2jZHN i.svg,
+.buttons---btn-lg---2xtUV.buttons---btn---2jZHN span.svg {
+  width: 24px;
+  height: 24px;
+}
+.buttons---btn---2jZHN i.svg,
+.buttons---btn---2jZHN span.svg {
+  width: 16px;
+  height: 16px;
+}
+.buttons---btn-sm---3cNnY.buttons---btn---2jZHN i.svg,
+.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN i.svg,
+.buttons---btn-sm---3cNnY.buttons---btn---2jZHN span.svg,
+.buttons---btn-xs---2eEDQ.buttons---btn---2jZHN span.svg {
+  width: 12px;
+  height: 12px;
 }
 
 /*# sourceMappingURL=react-buttons.css.map*/
