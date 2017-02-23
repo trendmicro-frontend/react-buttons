@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-buttons",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "description": "Trend Micro Components: React Buttons",
   "main": "lib/index.js",
   "files": [
@@ -58,7 +58,7 @@
     "react-addons-shallow-compare": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
-    "@trendmicro/react-loader": "^0.5.0",
+    "@trendmicro/react-loader": "~0.5.0",
     "babel-cli": "~6.23.0",
     "babel-core": "~6.23.1",
     "babel-eslint": "~7.1.1",
@@ -89,7 +89,7 @@
     "stylint-loader": "~1.0.0",
     "stylus-loader": "~2.4.0",
     "tap": "~10.1.1",
-    "trendmicro-ui": "^0.2.0",
+    "trendmicro-ui": "~0.2.0",
     "url-loader": "^0.5.7",
     "webpack": "~2.2.1",
     "webpack-dev-server": "~2.3.0"
