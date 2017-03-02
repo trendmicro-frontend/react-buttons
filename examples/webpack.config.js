@@ -65,7 +65,7 @@ module.exports = {
     },
     plugins: [
         new webpack.LoaderOptionsPlugin({
-            debug: true,
+            debug: true
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
