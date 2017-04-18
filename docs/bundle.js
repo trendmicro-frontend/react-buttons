@@ -25565,6 +25565,10 @@ var _classnames = __webpack_require__("../node_modules/classnames/index.js");
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _propTypes = __webpack_require__("../node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
@@ -25595,12 +25599,12 @@ var ButtonGroup = function ButtonGroup(_ref) {
 };
 
 ButtonGroup.propTypes = {
-    btnSize: _react.PropTypes.oneOf(['lg', 'md', 'sm', 'xs', 'large', 'medium', 'small', 'extra-small']),
-    vertical: _react.PropTypes.bool,
+    btnSize: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs', 'large', 'medium', 'small', 'extra-small']),
+    vertical: _propTypes2.default.bool,
 
     // Apply styles for use in a Dropdown.
     // This prop will be set automatically when the ButtonGroup is used inside a Dropdown.
-    dropdownOpen: _react.PropTypes.bool
+    dropdownOpen: _propTypes2.default.bool
 };
 ButtonGroup.defaultProps = {
     vertical: false,
@@ -26856,4 +26860,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?4e3b03d7c4c85f1c4ea0
+//# sourceMappingURL=bundle.js.map?4fcf2255317fd212d63a
