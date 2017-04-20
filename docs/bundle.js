@@ -25460,10 +25460,6 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
 var _index = __webpack_require__("../src/index.styl");
 
 var _index2 = _interopRequireDefault(_index);
@@ -25480,8 +25476,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Button = (_temp = _class = function (_Component) {
-    _inherits(Button, _Component);
+var Button = (_temp = _class = function (_PureComponent) {
+    _inherits(Button, _PureComponent);
 
     function Button() {
         _classCallCheck(this, Button);
@@ -25490,11 +25486,6 @@ var Button = (_temp = _class = function (_Component) {
     }
 
     _createClass(Button, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
-        }
-    }, {
         key: 'render',
         value: function render() {
             var _classes;
@@ -25525,7 +25516,7 @@ var Button = (_temp = _class = function (_Component) {
     }]);
 
     return Button;
-}(_react.Component), _class.propTypes = {
+}(_react.PureComponent), _class.propTypes = {
     componentClass: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
     type: _propTypes2.default.oneOf(['button', 'reset', 'submit']),
     btnSize: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs', 'large', 'medium', 'small', 'extra-small']),
@@ -26870,4 +26861,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?47cf46dc5bfd4af2c21d
+//# sourceMappingURL=bundle.js.map?00f4324d0b23b960da84

@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-buttons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Trend Micro Components: React Buttons",
   "main": "lib/index.js",
   "files": [
@@ -55,8 +55,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "react-addons-shallow-compare": "^0.14.0 || ^15.0.0"
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "@trendmicro/react-loader": "~0.5.2",

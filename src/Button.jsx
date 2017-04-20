@@ -1,10 +1,9 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React, { PureComponent } from 'react';
 import styles from './index.styl';
 
-class Button extends Component {
+class Button extends PureComponent {
     static propTypes = {
         componentClass: PropTypes.oneOfType([
             PropTypes.func,
@@ -60,9 +59,6 @@ class Button extends Component {
         dropdownToggle: false
     };
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     render() {
         const {
             className,
