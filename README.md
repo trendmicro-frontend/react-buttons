@@ -23,6 +23,28 @@ Demo: https://trendmicro-frontend.github.io/react-buttons
   import '@trendmicro/react-buttons/dist/react-buttons.css';
   ```
 
+## Recommended Setup
+
+Create a `Buttons` components inside your common components directory:
+```
+components/
+  Buttons/
+    index.js
+```
+
+### Buttons
+**components/Buttons/index.js**
+```js
+import '@trendmicro/react-buttons/dist/react-buttons.css';
+
+export { Button, ButtonGroup, ButtonToolbar } from '@trendmicro/react-buttons';
+```
+
+Then, import `Button` component in your code:
+```js
+import { Button } from '../components/Buttons';
+```
+
 ## Usage
 
 ### Button Styles
