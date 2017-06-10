@@ -41,7 +41,7 @@ export { Button, ButtonGroup, ButtonToolbar } from '@trendmicro/react-buttons';
 
 Then, import `Button` component in your code:
 ```js
-import { Button } from '../components/Buttons';
+import { Button } from './components/Buttons';
 ```
 
 ## Usage
