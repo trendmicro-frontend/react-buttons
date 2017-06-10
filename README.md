@@ -25,7 +25,7 @@ Demo: https://trendmicro-frontend.github.io/react-buttons
 
 ## Recommended Setup
 
-Create a `Buttons` components inside your common components directory:
+Create a `Buttons` component inside your common components directory:
 ```
 components/
   Buttons/
