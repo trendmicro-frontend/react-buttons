@@ -32,7 +32,6 @@ components/
     index.js
 ```
 
-### Buttons
 **components/Buttons/index.js**
 ```js
 import '@trendmicro/react-buttons/dist/react-buttons.css';
