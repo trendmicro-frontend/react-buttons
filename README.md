@@ -98,8 +98,8 @@ import { Button } from './components/Buttons';
     <Button>Right</Button>
 </ButtonGroup>
 <ButtonGroup>
-    <Button iconOnly><i className="fa fa-pencil" /></Button>
-    <Button iconOnly><i className="fa fa-mail-reply" /></Button>
+    <Button compact><i className="fa fa-pencil" /></Button>
+    <Button compact><i className="fa fa-mail-reply" /></Button>
 </ButtonGroup>
 ```
 
@@ -112,9 +112,9 @@ import { Button } from './components/Buttons';
     <Button btnStyle="flat">Right</Button>
 </ButtonGroup>
 <ButtonGroup>
-    <Button btnStyle="flat" iconOnly><i className="fa fa-pie-chart" /></Button>
-    <Button btnStyle="flat" iconOnly><i className="fa fa-line-chart" /></Button>
-    <Button btnStyle="flat" iconOnly><i className="fa fa-table" /></Button>
+    <Button btnStyle="flat" compact><i className="fa fa-pie-chart" /></Button>
+    <Button btnStyle="flat" compact><i className="fa fa-line-chart" /></Button>
+    <Button btnStyle="flat" compact><i className="fa fa-table" /></Button>
 </ButtonGroup>
 ```
 
@@ -188,19 +188,19 @@ import { Button } from './components/Buttons';
 </Button>
 ```
 
-#### Icon only
+#### Compact
 
 ```js
-<Button iconOnly>
+<Button compact>
     <i className="fa fa-comment" />
 </Button>
-<Button btnStyle="primary" iconOnly>
+<Button btnStyle="primary" compact>
     <i className="fa fa-plus" />
 </Button>
-<Button btnStyle="emphasis" iconOnly>
+<Button btnStyle="emphasis" compact>
     <i className="fa fa-search" />
 </Button>
-<Button btnStyle="flat" iconOnly>
+<Button btnStyle="flat" compact>
     <i className="fa fa-cog" />
 </Button>
 ```

@@ -1,4 +1,4 @@
-/*! react-buttons v1.0.4 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
+/*! react-buttons v1.1.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
 .buttons---btn---2jZHN {
   display: inline-block;
   min-width: 80px;
@@ -57,7 +57,7 @@ fieldset[disabled] a .buttons---btn---2jZHN {
 .buttons---btn---2jZHN + .buttons---btn---2jZHN {
   margin-left: 8px;
 }
-.buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {
+.buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
   min-width: 0;
   padding-left: 0;
   padding-right: 0;
@@ -395,8 +395,8 @@ fieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {
   line-height: 24px;
   border-radius: 3px;
 }
-.buttons---btn-lg---2xtUV.buttons---btn-icon-only---NYhkW,
-.buttons---btn-group-lg---3C8An > .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {
+.buttons---btn-lg---2xtUV.buttons---btn-compact---mXDAU,
+.buttons---btn-group-lg---3C8An > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
   width: 58px;
 }
 .buttons---btn-md---HRR_F,
@@ -413,8 +413,8 @@ fieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {
   line-height: 18px;
   border-radius: 3px;
 }
-.buttons---btn-sm---3cNnY.buttons---btn-icon-only---NYhkW,
-.buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {
+.buttons---btn-sm---3cNnY.buttons---btn-compact---mXDAU,
+.buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
   width: 36px;
 }
 .buttons---btn-xs---2eEDQ,
@@ -424,8 +424,8 @@ fieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {
   line-height: 18px;
   border-radius: 3px;
 }
-.buttons---btn-xs---2eEDQ.buttons---btn-icon-only---NYhkW,
-.buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW {
+.buttons---btn-xs---2eEDQ.buttons---btn-compact---mXDAU,
+.buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
   width: 28px;
 }
 .buttons---btn-block---1nSNV {
@@ -610,7 +610,7 @@ input[type="button"].buttons---btn-block---1nSNV {
   padding-left: 12px;
   padding-right: 12px;
 }
-.buttons---dropdown-toggle---vMtjL.buttons---btn-icon-only---NYhkW {
+.buttons---dropdown-toggle---vMtjL.buttons---btn-compact---mXDAU {
   text-align: center;
 }
 .buttons---dropdown-toggle---vMtjL.buttons---btn-link---1xwS4 {
@@ -640,7 +640,7 @@ input[type="button"].buttons---btn-block---1nSNV {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.buttons---btn---2jZHN.buttons---btn-icon-only---NYhkW .fa {
+.buttons---btn---2jZHN.buttons---btn-compact---mXDAU .fa {
   margin-right: 0;
 }
 .buttons---btn---2jZHN .fa {
