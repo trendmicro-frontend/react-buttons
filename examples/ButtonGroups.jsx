@@ -14,8 +14,8 @@ export default () => {
                     <Button>Right</Button>
                 </ButtonGroup>
                 <ButtonGroup>
-                    <Button iconOnly><i className="fa fa-pencil" /></Button>
-                    <Button iconOnly><i className="fa fa-mail-reply" /></Button>
+                    <Button compact><i className="fa fa-pencil" /></Button>
+                    <Button compact><i className="fa fa-mail-reply" /></Button>
                 </ButtonGroup>
                 <br /><br />
 
@@ -26,9 +26,9 @@ export default () => {
                     <Button btnStyle="flat">Right</Button>
                 </ButtonGroup>
                 <ButtonGroup>
-                    <Button btnStyle="flat" iconOnly><i className="fa fa-pie-chart" /></Button>
-                    <Button btnStyle="flat" iconOnly><i className="fa fa-line-chart" /></Button>
-                    <Button btnStyle="flat" iconOnly><i className="fa fa-table" /></Button>
+                    <Button btnStyle="flat" compact><i className="fa fa-pie-chart" /></Button>
+                    <Button btnStyle="flat" compact><i className="fa fa-line-chart" /></Button>
+                    <Button btnStyle="flat" compact><i className="fa fa-table" /></Button>
                 </ButtonGroup>
             </div>
         </div>

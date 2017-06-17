@@ -38,7 +38,8 @@ class Button extends PureComponent {
         focus: PropTypes.bool,
         disabled: PropTypes.bool,
         block: PropTypes.bool,
-        iconOnly: PropTypes.bool,
+        compact: PropTypes.bool,
+        iconOnly: PropTypes.bool, // alias of compact
 
         // Apply styles for use in a Dropdown.
         // This prop will be set automatically when the Button is used inside a Dropdown.
@@ -55,7 +56,8 @@ class Button extends PureComponent {
         focus: false,
         disabled: false,
         block: false,
-        iconOnly: false,
+        compact: false,
+        iconOnly: false, // alias of compact
         dropdownToggle: false
     };
 
@@ -71,7 +73,8 @@ class Button extends PureComponent {
             focus,
             disabled,
             block,
-            iconOnly,
+            compact,
+            iconOnly, // alias of compact
             dropdownToggle,
             ...props
         } = this.props;
@@ -88,7 +91,7 @@ class Button extends PureComponent {
             [styles.btnBorder]: btnStyle === 'border' || btnStyle === 'flat',
             [styles.btnLink]: btnStyle === 'link',
             [styles.btnBlock]: block,
-            [styles.btnIconOnly]: iconOnly,
+            [styles.btnCompact]: compact || iconOnly,
             [styles.hover]: hover,
             [styles.active]: active,
             [styles.focus]: focus,

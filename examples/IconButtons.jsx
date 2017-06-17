@@ -44,17 +44,17 @@ export default () => {
                 </Button>
                 <br /><br />
 
-                <p><strong>Icon only</strong></p>
-                <Button iconOnly>
+                <p><strong>Icon</strong></p>
+                <Button compact>
                     <i className="fa fa-comment" />
                 </Button>
-                <Button btnStyle="primary" iconOnly>
+                <Button btnStyle="primary" compact>
                     <i className="fa fa-plus" />
                 </Button>
-                <Button btnStyle="emphasis" iconOnly>
+                <Button btnStyle="emphasis" compact>
                     <i className="fa fa-search" />
                 </Button>
-                <Button btnStyle="flat" iconOnly>
+                <Button btnStyle="flat" compact>
                     <i className="fa fa-cog" />
                 </Button>
             </div>
