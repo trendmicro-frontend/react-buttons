@@ -1,4 +1,4 @@
-/*! react-buttons v1.1.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
+/*! react-buttons v1.2.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-buttons */
 .buttons---btn---2jZHN {
   display: inline-block;
   min-width: 80px;
@@ -56,12 +56,6 @@ fieldset[disabled] a .buttons---btn---2jZHN {
 }
 .buttons---btn---2jZHN + .buttons---btn---2jZHN {
   margin-left: 8px;
-}
-.buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
-  min-width: 0;
-  padding-left: 0;
-  padding-right: 0;
-  width: 42px;
 }
 .buttons---btn---2jZHN > [class*="loader-container"] {
   display: inline-block;
@@ -260,7 +254,6 @@ fieldset[disabled] .buttons---btn-danger---1UUqU.buttons---focus---1kVJZ {
   background-image: -o-linear-gradient(top, #fff 0%, #fff 100%);
   background-image: -ms-linear-gradient(top, #fff 0%, #fff 100%);
   background-image: linear-gradient(to bottom, #fff 0%, #fff 100%);
-  background-image: none false;
   background-repeat: repeat-x;
   border-color: #ccc;
   -webkit-transition: all 0.2s linear 0s;
@@ -397,7 +390,9 @@ fieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {
 }
 .buttons---btn-lg---2xtUV.buttons---btn-compact---mXDAU,
 .buttons---btn-group-lg---3C8An > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
-  width: 58px;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 58px;
 }
 .buttons---btn-md---HRR_F,
 .buttons---btn-group-md---3FQVP > .buttons---btn---2jZHN {
@@ -405,6 +400,12 @@ fieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {
   font-size: 13px;
   line-height: 20px;
   border-radius: 3px;
+}
+.buttons---btn-md---HRR_F.buttons---btn-compact---mXDAU,
+.buttons---btn-group-md---3FQVP > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 42px;
 }
 .buttons---btn-sm---3cNnY,
 .buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN {
@@ -415,7 +416,9 @@ fieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {
 }
 .buttons---btn-sm---3cNnY.buttons---btn-compact---mXDAU,
 .buttons---btn-group-sm---3_QLf > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
-  width: 36px;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 36px;
 }
 .buttons---btn-xs---2eEDQ,
 .buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN {
@@ -426,7 +429,9 @@ fieldset[disabled] .buttons---btn-link---1xwS4.buttons---focus---1kVJZ {
 }
 .buttons---btn-xs---2eEDQ.buttons---btn-compact---mXDAU,
 .buttons---btn-group-xs---1c4pb > .buttons---btn---2jZHN.buttons---btn-compact---mXDAU {
-  width: 28px;
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 28px;
 }
 .buttons---btn-block---1nSNV {
   display: block;
