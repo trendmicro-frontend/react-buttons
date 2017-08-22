@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-buttons",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Trend Micro Components: React Buttons",
   "main": "lib/index.js",
   "files": [

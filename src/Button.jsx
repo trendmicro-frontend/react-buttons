@@ -1,6 +1,10 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import {
+    btnSizes,
+    btnStyles
+} from './constants';
 import styles from './index.styl';
 
 class Button extends PureComponent {
@@ -14,25 +18,8 @@ class Button extends PureComponent {
             'reset',
             'submit'
         ]),
-        btnSize: PropTypes.oneOf([
-            'lg',
-            'md',
-            'sm',
-            'xs',
-            'large',
-            'medium',
-            'small',
-            'extra-small'
-        ]),
-        btnStyle: PropTypes.oneOf([
-            'default',
-            'primary',
-            'danger',
-            'emphasis', // alias of "danger"
-            'border',
-            'flat',     // alias of "border"
-            'link'
-        ]),
+        btnSize: PropTypes.oneOf(btnSizes),
+        btnStyle: PropTypes.oneOf(btnStyles),
         active: PropTypes.bool,
         hover: PropTypes.bool,
         focus: PropTypes.bool,

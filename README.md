@@ -106,15 +106,15 @@ import { Button } from './components/Buttons';
 #### Flat button group
 
 ```js
-<ButtonGroup>
-    <Button btnStyle="flat" active>Left</Button>
-    <Button btnStyle="flat">Middle</Button>
-    <Button btnStyle="flat">Right</Button>
+<ButtonGroup btnStyle="flat" btnSize="md">
+    <Button active>Left</Button>
+    <Button>Middle</Button>
+    <Button>Right</Button>
 </ButtonGroup>
-<ButtonGroup>
-    <Button btnStyle="flat" compact><i className="fa fa-pie-chart" /></Button>
-    <Button btnStyle="flat" compact><i className="fa fa-line-chart" /></Button>
-    <Button btnStyle="flat" compact><i className="fa fa-table" /></Button>
+<ButtonGroup btnStyle="flat" btnSize="md">
+    <Button compact><i className="fa fa-pie-chart" /></Button>
+    <Button compact><i className="fa fa-line-chart" /></Button>
+    <Button compact><i className="fa fa-table" /></Button>
 </ButtonGroup>
 ```
 

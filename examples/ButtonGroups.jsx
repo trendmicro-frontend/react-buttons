@@ -20,15 +20,15 @@ export default () => {
                 <br /><br />
 
                 <p><strong>Flat button group</strong></p>
-                <ButtonGroup>
-                    <Button btnStyle="flat" active>Left</Button>
-                    <Button btnStyle="flat">Middle</Button>
-                    <Button btnStyle="flat">Right</Button>
+                <ButtonGroup btnSize="md" btnStyle="flat">
+                    <Button active>Left</Button>
+                    <Button>Middle</Button>
+                    <Button>Right</Button>
                 </ButtonGroup>
-                <ButtonGroup>
-                    <Button btnStyle="flat" compact><i className="fa fa-pie-chart" /></Button>
-                    <Button btnStyle="flat" compact><i className="fa fa-line-chart" /></Button>
-                    <Button btnStyle="flat" compact><i className="fa fa-table" /></Button>
+                <ButtonGroup btnSize="md" btnStyle="flat">
+                    <Button compact><i className="fa fa-pie-chart" /></Button>
+                    <Button compact><i className="fa fa-line-chart" /></Button>
+                    <Button compact><i className="fa fa-table" /></Button>
                 </ButtonGroup>
             </div>
         </div>
