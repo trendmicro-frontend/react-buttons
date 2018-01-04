@@ -52,7 +52,6 @@ ButtonGroup.propTypes = {
     dropdownOpen: PropTypes.bool
 };
 ButtonGroup.defaultProps = {
-    btnSize: 'md',
     vertical: false,
     dropdownOpen: false
 };
