@@ -30,6 +30,25 @@ export default () => {
                     <Button compact><i className="fa fa-line-chart" /></Button>
                     <Button compact><i className="fa fa-table" /></Button>
                 </ButtonGroup>
+
+                <br /><br />
+                <p><strong>Vertical button group</strong></p>
+                <div className="row">
+                    <div className="col-xs-4">
+                        <ButtonGroup vertical btnStyle="flat">
+                            <Button active>Left</Button>
+                            <Button>Middle</Button>
+                            <Button>Right</Button>
+                        </ButtonGroup>
+                    </div>
+                    <div className="col-xs-4">
+                        <ButtonGroup vertical btnStyle="flat">
+                            <Button compact><i className="fa fa-pie-chart" /></Button>
+                            <Button compact><i className="fa fa-line-chart" /></Button>
+                            <Button compact><i className="fa fa-table" /></Button>
+                        </ButtonGroup>
+                    </div>
+                </div>
             </div>
         </div>
     );

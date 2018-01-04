@@ -1,7 +1,6 @@
 import 'trendmicro-ui/dist/css/trendmicro-ui.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
 import Nav from './Nav';
 import Section from './Section';
 import ButtonStyles from './ButtonStyles';
@@ -26,29 +25,29 @@ class App extends React.Component {
                                 <ButtonStyles />
                             </Section>
                         </div>
-                        <div className={classNames('col-md-12 col-lg-6 col-xl-4')}>
-                            <Section className="row-md-5">
+                        <div className="col-md-12 col-lg-6 col-xl-4">
+                            <Section className="row-md-6">
                                 <ButtonSizes />
                             </Section>
                         </div>
                         <div className="col-md-12 col-lg-6 col-xl-4">
-                            <Section className="row-md-5">
+                            <Section className="row-md-6">
                                 <ButtonStates />
                             </Section>
                         </div>
                         <div className="col-md-12 col-lg-6 col-xl-4">
-                            <Section className="row-md-4 row-xl-5">
-                                <BlockButtons />
-                            </Section>
-                        </div>
-                        <div className="col-md-12 col-lg-6 col-xl-4">
-                            <Section className="row-md-4 row-xl-6">
+                            <Section className="row-md-6">
                                 <ButtonGroup />
                             </Section>
                         </div>
                         <div className="col-md-12 col-lg-6 col-xl-4">
                             <Section className="row-md-6">
                                 <IconButtons />
+                            </Section>
+                        </div>
+                        <div className="col-md-12 col-lg-6 col-xl-4">
+                            <Section className="row-md-6">
+                                <BlockButtons />
                             </Section>
                         </div>
                     </div>
