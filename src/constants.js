@@ -15,6 +15,6 @@ export const btnStyles = [
     'danger',
     'emphasis', // alias of "danger"
     'border',
-    'flat',     // alias of "border"
+    'flat', // alias of "border"
     'link'
 ];
