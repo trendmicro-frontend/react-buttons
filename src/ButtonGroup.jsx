@@ -8,6 +8,8 @@ import {
 } from './constants';
 import styles from './index.styl';
 
+const getComponentType = (Component) => (Component ? (<Component />).type : undefined);
+
 const ButtonGroup = ({ btnSize, btnStyle, vertical, dropdownOpen, children, className, ...props }) => {
     const classes = {
         [styles.btnGroup]: true,
@@ -25,7 +27,7 @@ const ButtonGroup = ({ btnSize, btnStyle, vertical, dropdownOpen, children, clas
             className={classNames(className, classes)}
         >
             {React.Children.map(children, child => {
-                if (React.isValidElement(child) && child.type === Button) {
+                if (React.isValidElement(child) && child.type === getComponentType(Button)) {
                     const childProps = {};
                     if (btnSizes.indexOf(btnSize) >= 0) {
                         childProps.btnSize = btnSize;
