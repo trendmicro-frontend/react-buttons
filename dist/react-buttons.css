@@ -688,5 +688,31 @@ input[type="button"].buttons---btn-block---1nSNV {
   width: 12px;
   height: 12px;
 }
-
-/*# sourceMappingURL=react-buttons.css.map*/
+.buttons---section---foyYY {
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: height 0.3s ease;
+  -moz-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  -ms-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}
+.buttons---section---foyYY:last-child {
+  margin-bottom: 20px;
+}
+.buttons---section-content---TYJOP {
+  padding: 0 16px 16px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@media screen and (max-width: 1023px) {
+  .buttons---section-content---TYJOP {
+    position: static;
+    height: 100%;
+  }
+}
