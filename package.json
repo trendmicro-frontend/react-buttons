@@ -27,19 +27,7 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-buttons.git"
   },
-  "author": "Tina C Lin <tina_c_lin@trend.com.tw>",
-  "contributors": [
-    {
-      "name": "Tina C Lin",
-      "email": "tina_c_lin@trend.com.tw",
-      "url": "https://github.com/tinaclin"
-    },
-    {
-      "name": "Cheton Wu",
-      "email": "cheton_wu@trend.com.tw",
-      "url": "https://github.com/cheton"
-    }
-  ],
+  "author": "Tina C Lin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trendmicro-frontend/react-buttons/issues"
